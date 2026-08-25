@@ -1,4 +1,4 @@
-# P-do (TeamTodo)
+# P-Todo 
 
 > A lightweight, high-performance desktop todo application for individuals and small teams, built with modern JavaFX.
 > 軽量・高性能なデスクトップタスク管理ツール。個人〜小規模チーム向けにモダンな JavaFX で構築。
