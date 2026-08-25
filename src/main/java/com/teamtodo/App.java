@@ -42,9 +42,9 @@ public class App extends Application {
         primaryStage = stage;
 
         // 初始化数据库
-        String dbDir = System.getProperty("user.home") + File.separator + "team-todo" + File.separator + "data";
+        String dbDir = System.getProperty("user.home") + File.separator + "P-Todo" + File.separator + "data";
         new File(dbDir).mkdirs();
-        String dbPath = dbDir + File.separator + "team-todo.db";
+        String dbPath = dbDir + File.separator + "P-Todo.db";
         DatabaseManager.getInstance(dbPath);
 
         // 启动 REST API 服务器（供 OpenClaw 等智能体调用）
@@ -123,8 +123,8 @@ public class App extends Application {
     public static Image loadIcon() {
         // 优先级：项目目录图标 > F:\XXZ\日程.png
         String[] candidates = {
-                "C:\\Users\\p\\.openclaw\\workspace\\大龙虾互动区\\team-todo\\src\\main\\resources\\icon.png",
-                "F:\\XXZ\\日程.png"
+                "icon.png",
+                "icon.png"
         };
         for (String p : candidates) {
             File f = new File(p);
@@ -149,8 +149,8 @@ public class App extends Application {
         // 创建图标（优先外部图标文件，回退内置生成图标）
         java.awt.image.BufferedImage bimg = null;
         for (String p : new String[]{
-                "C:\\Users\\p\\.openclaw\\workspace\\大龙虾互动区\\team-todo\\src\\main\\resources\\icon.png",
-                "F:\\XXZ\\日程.png"
+                "icon.png",
+                "icon.png"
         }) {
             File f = new File(p);
             if (f.exists()) {

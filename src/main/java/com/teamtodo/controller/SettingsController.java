@@ -59,7 +59,7 @@ public class SettingsController {
 
     @FXML
     private void initialize() {
-        dataPathLabel.setText(System.getProperty("user.home") + File.separator + "team-todo" + File.separator + "data" + File.separator + "team-todo.db");
+        dataPathLabel.setText(System.getProperty("user.home") + File.separator + "P-Todo" + File.separator + "data" + File.separator + "P-Todo.db");
         refreshUsers();
 
         // 加载自定义音效路径
@@ -244,7 +244,7 @@ public class SettingsController {
     private void exportJson() {
         FileChooser fc = new FileChooser();
         fc.setTitle(t("settings.exportJsonTitle"));
-        fc.setInitialFileName("team-todo-export.json");
+        fc.setInitialFileName("p-todo-export.json");
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter(t("settings.jsonFiles"), "*.json"));
         File file = fc.showSaveDialog(btnSaveUser.getScene().getWindow());
         if (file != null) {
@@ -262,7 +262,7 @@ public class SettingsController {
     private void exportCsv() {
         FileChooser fc = new FileChooser();
         fc.setTitle(t("settings.exportCsvTitle"));
-        fc.setInitialFileName("team-todo-export.csv");
+        fc.setInitialFileName("p-todo-export.csv");
         fc.getExtensionFilters().add(new FileChooser.ExtensionFilter(t("settings.csvFiles"), "*.csv"));
         File file = fc.showSaveDialog(btnSaveUser.getScene().getWindow());
         if (file != null) {
@@ -299,7 +299,7 @@ public class SettingsController {
         if (userCombo != null) userCombo.promptTextProperty().bind(com.teamtodo.util.I18n.text("settings.memberManage"));
         if (soundPathField != null) soundPathField.promptTextProperty().bind(com.teamtodo.util.I18n.text("settings.soundHint"));
         if (dataPathLabel != null) {
-            String path = System.getProperty("user.home") + "/team-todo/data/team-todo.db";
+            String path = System.getProperty("user.home") + "/P-Todo/data/P-Todo.db";
             dataPathLabel.setText(com.teamtodo.util.I18n.t("settings.dataPath", path));
         }
         if (langCombo != null) langCombo.promptTextProperty().bind(com.teamtodo.util.I18n.text("settings.selectLanguage"));

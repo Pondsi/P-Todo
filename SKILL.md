@@ -1,17 +1,17 @@
-# TeamTodo REST API Skill
+# P-Todo REST API Skill
 
 ---
 
 ## 简体中文
 
-> 当用户需要操作 TeamTodo 待办应用时使用此 skill。
-> 触发词：待办、任务、TeamTodo、todo、task、タスク、作業、tâche、할일、Aufgabe、tarea、tarefa
+> 当用户需要操作 P-Todo 待办应用时使用此 skill。
+> 触发词：待办、任务、P-Todo、todo、task、タスク、作業、tâche、할일、Aufgabe、tarea、tarefa
 
-**前置条件：** TeamTodo 应用已启动（端口 9527），访问 `http://localhost:9527/api/health` 确认服务正常。
+**前置条件：** P-Todo 应用已启动（端口 9527），访问 `http://localhost:9527/api/health` 确认服务正常。
 
 **端口：** 9527（可在设置页修改，修改后需重启）
-**数据库：** SQLite，位于 `~/team-todo/data/team-todo.db`
-**日志：** `~/team-todo/data/team-todo.log`
+**数据库：** SQLite，位于 `~/P-Todo/data/P-Todo.db`
+**日志：** `~/P-Todo/data/P-Todo.log`
 **支持语言：** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### 健康检查
@@ -80,14 +80,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## 繁體中文
 
-> 當使用者需要操作 TeamTodo 待辦應用時使用此 skill。
-> 觸發詞：待辦、任務、TeamTodo、todo、task、タスク、作業、tâche、할일、Aufgabe、tarea、tarefa
+> 當使用者需要操作 P-Todo 待辦應用時使用此 skill。
+> 觸發詞：待辦、任務、P-Todo、todo、task、タスク、作業、tâche、할일、Aufgabe、tarea、tarefa
 
-**前置條件：** TeamTodo 應用已啟動（連接埠 9527），存取 `http://localhost:9527/api/health` 確認服務正常。
+**前置條件：** P-Todo 應用已啟動（連接埠 9527），存取 `http://localhost:9527/api/health` 確認服務正常。
 
 **連接埠：** 9527（可在設定頁修改，修改後需重啟）
-**資料庫：** SQLite，位於 `~/team-todo/data/team-todo.db`
-**日誌：** `~/team-todo/data/team-todo.log`
+**資料庫：** SQLite，位於 `~/P-Todo/data/P-Todo.db`
+**日誌：** `~/P-Todo/data/P-Todo.log`
 **支援語言：** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### 健康檢查
@@ -156,14 +156,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## English
 
-> Use this skill when users need to interact with the TeamTodo todo application.
-> Triggers: 待办, 任务, TeamTodo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
+> Use this skill when users need to interact with the P-Todo todo application.
+> Triggers: 待办, 任务, P-Todo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
 
-**Prerequisites:** TeamTodo app must be running (port 9527). Verify with `http://localhost:9527/api/health`.
+**Prerequisites:** P-Todo app must be running (port 9527). Verify with `http://localhost:9527/api/health`.
 
 **Port:** 9527 (configurable in Settings, requires restart)
-**Database:** SQLite, located at `~/team-todo/data/team-todo.db`
-**Logs:** `~/team-todo/data/team-todo.log`
+**Database:** SQLite, located at `~/P-Todo/data/P-Todo.db`
+**Logs:** `~/P-Todo/data/P-Todo.log`
 **Supported languages:** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### Health Check
@@ -232,14 +232,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## 日本語
 
-> ユーザーが TeamTodo タスク管理アプリと操作する際に使用してください。
-> トリガー：待办、任务、TeamTodo、todo、task、タスク、作業、tâche、할일、Aufgabe、tarea、tarefa
+> ユーザーが P-Todo タスク管理アプリと操作する際に使用してください。
+> トリガー：待办、任务、P-Todo、todo、task、タスク、作業、tâche、할일、Aufgabe、tarea、tarefa
 
-**前提条件：** TeamTodo アプリが起動している必要があります（ポート 9527）。`http://localhost:9527/api/health` でサービスの正常性を確認してください。
+**前提条件：** P-Todo アプリが起動している必要があります（ポート 9527）。`http://localhost:9527/api/health` でサービスの正常性を確認してください。
 
 **ポート：** 9527（設定ページで変更可能、変更後は再起動が必要）
-**データベース：** SQLite、`~/team-todo/data/team-todo.db` に配置
-**ログ：** `~/team-todo/data/team-todo.log`
+**データベース：** SQLite、`~/P-Todo/data/P-Todo.db` に配置
+**ログ：** `~/P-Todo/data/P-Todo.log`
 **対応言語：** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### ヘルスチェック
@@ -308,14 +308,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## 조선어
 
-> 사용자가 TeamTodo 할일 앱과 상호작용해야 할 때 이 스킬을 사용하세요.
-> 트리거: 待办, 任务, TeamTodo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
+> 사용자가 P-Todo 할일 앱과 상호작용해야 할 때 이 스킬을 사용하세요.
+> 트리거: 待办, 任务, P-Todo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
 
-**전제 조건:** TeamTodo 앱이 실행 중이어야 합니다 (포트 9527). `http://localhost:9527/api/health`에서 서비스 상태를 확인하세요.
+**전제 조건:** P-Todo 앱이 실행 중이어야 합니다 (포트 9527). `http://localhost:9527/api/health`에서 서비스 상태를 확인하세요.
 
 **포트:** 9527 (설정에서 변경 가능, 변경 후 재시작 필요)
-**데이터베이스:** SQLite, `~/team-todo/data/team-todo.db` 에 위치
-**로그:** `~/team-todo/data/team-todo.log`
+**데이터베이스:** SQLite, `~/P-Todo/data/P-Todo.db` 에 위치
+**로그:** `~/P-Todo/data/P-Todo.log`
 **지원 언어:** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### 상태 확인
@@ -384,14 +384,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## Français
 
-> Utilisez cette compétence lorsque les utilisateurs ont besoin d'interagir avec l'application de tâches TeamTodo.
-> Déclencheurs : 待办, 任务, TeamTodo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
+> Utilisez cette compétence lorsque les utilisateurs ont besoin d'interagir avec l'application de tâches P-Todo.
+> Déclencheurs : 待办, 任务, P-Todo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
 
-**Prérequis :** L'application TeamTodo doit être en cours d'exécution (port 9527). Vérifiez avec `http://localhost:9527/api/health`.
+**Prérequis :** L'application P-Todo doit être en cours d'exécution (port 9527). Vérifiez avec `http://localhost:9527/api/health`.
 
 **Port :** 9527 (configurable dans les paramètres, redémarrage requis)
-**Base de données :** SQLite, située dans `~/team-todo/data/team-todo.db`
-**Journaux :** `~/team-todo/data/team-todo.log`
+**Base de données :** SQLite, située dans `~/P-Todo/data/P-Todo.db`
+**Journaux :** `~/P-Todo/data/P-Todo.log`
 **Langues supportées :** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### Vérification de santé
@@ -460,14 +460,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## Deutsch
 
-> Verwenden Sie dieses Skill, wenn Benutzer mit der TeamTodo-ToDo-Anwendung interagieren müssen.
-> Auslöser: 待办, 任务, TeamTodo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
+> Verwenden Sie dieses Skill, wenn Benutzer mit der P-Todo-Anwendung interagieren müssen.
+> Auslöser: 待办, 任务, P-Todo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
 
-**Voraussetzungen:** Die TeamTodo-Anwendung muss laufen (Port 9527). Überprüfen Sie mit `http://localhost:9527/api/health`.
+**Voraussetzungen:** Die P-Todo-Anwendung muss laufen (Port 9527). Überprüfen Sie mit `http://localhost:9527/api/health`.
 
 **Port:** 9527 (in den Einstellungen konfigurierbar, Neustart erforderlich)
-**Datenbank:** SQLite, befindet sich unter `~/team-todo/data/team-todo.db`
-**Logs:** `~/team-todo/data/team-todo.log`
+**Datenbank:** SQLite, befindet sich unter `~/P-Todo/data/P-Todo.db`
+**Logs:** `~/P-Todo/data/P-Todo.log`
 **Unterstützte Sprachen:** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### Gesundheitsprüfung
@@ -536,14 +536,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## Español
 
-> Use esta habilidad cuando los usuarios necesiten interactuar con la aplicación de tareas TeamTodo.
-> Activadores: 待办, 任务, TeamTodo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
+> Use esta habilidad cuando los usuarios necesiten interactuar con la aplicación de tareas P-Todo.
+> Activadores: 待办, 任务, P-Todo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
 
-**Requisitos previos:** La aplicación TeamTodo debe estar ejecutándose (puerto 9527). Verifique con `http://localhost:9527/api/health`.
+**Requisitos previos:** La aplicación P-Todo debe estar ejecutándose (puerto 9527). Verifique con `http://localhost:9527/api/health`.
 
 **Puerto:** 9527 (configurable en Configuración, requiere reinicio)
-**Base de datos:** SQLite, ubicada en `~/team-todo/data/team-todo.db`
-**Registros:** `~/team-todo/data/team-todo.log`
+**Base de datos:** SQLite, ubicada en `~/P-Todo/data/P-Todo.db`
+**Registros:** `~/P-Todo/data/P-Todo.log`
 **Idiomas soportados:** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### Verificación de salud
@@ -612,14 +612,14 @@ curl -X POST http://localhost:9527/api/todos/{id}/complete
 
 ## Português
 
-> Use esta habilidade quando os usuários precisarem interagir com o aplicativo de tarefas TeamTodo.
-> Ativadores: 待办, 任务, TeamTodo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
+> Use esta habilidade quando os usuários precisarem interagir com o aplicativo de tarefas P-Todo.
+> Ativadores: 待办, 任务, P-Todo, todo, task, タスク, 作業, tâche, 할일, Aufgabe, tarea, tarefa
 
-**Pré-requisitos:** O aplicativo TeamTodo deve estar em execução (porta 9527). Verifique com `http://localhost:9527/api/health`.
+**Pré-requisitos:** O aplicativo P-Todo deve estar em execução (porta 9527). Verifique com `http://localhost:9527/api/health`.
 
 **Porta:** 9527 (configurável nas Configurações, requer reinicialização)
-**Banco de dados:** SQLite, localizado em `~/team-todo/data/team-todo.db`
-**Logs:** `~/team-todo/data/team-todo.log`
+**Banco de dados:** SQLite, localizado em `~/P-Todo/data/P-Todo.db`
+**Logs:** `~/P-Todo/data/P-Todo.log`
 **Idiomas suportados:** zh, zh-TW, en, ja, ko, fr, de, es, pt
 
 ### Verificação de saúde

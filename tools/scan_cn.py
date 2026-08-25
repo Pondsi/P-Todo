@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import io, re, glob, os
 
-os.chdir(r'C:\Users\p\.openclaw\workspace\大龙虾互动区\team-todo\src\main')
+os.chdir('src/main')
 
 issues = []
 for f in glob.glob('**/*.java', recursive=True) + glob.glob('**/*.fxml', recursive=True):

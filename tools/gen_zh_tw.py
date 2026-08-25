@@ -3,7 +3,7 @@
 import io, sys
 import zhconv
 
-BASE = r"C:\Users\p\.openclaw\workspace\大龙虾互动区\team-todo\src\main\resources\i18n"
+BASE = "src/main/resources/i18n"
 
 # 需要人工修正的键（zhconv 转换不理想或需要繁体特定用词）
 OVERRIDES = {

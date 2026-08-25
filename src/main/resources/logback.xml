@@ -11,9 +11,9 @@
 
     <!-- 文件输出（滚动，单文件上限 10MB，保留 5 个历史文件） -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>data/team-todo.log</file>
+        <file>data/P-Todo.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>data/team-todo.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <fileNamePattern>data/P-Todo.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
             <maxHistory>5</maxHistory>
             <totalSizeCap>50MB</totalSizeCap>
         </rollingPolicy>

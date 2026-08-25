@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.teamtodo</groupId>
-    <artifactId>team-todo</artifactId>
+    <artifactId>P-Todo</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>TeamTodo</name>
+    <name>P-Todo</name>
     <description>团队待办协作工具 - JavaFX 桌面应用</description>
 
     <properties>

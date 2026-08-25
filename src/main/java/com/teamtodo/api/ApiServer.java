@@ -102,7 +102,7 @@ public class ApiServer {
 
     // ===== 健康检查 =====
     private void handleHealth(HttpExchange exchange) throws IOException {
-        sendJson(exchange, 200, Map.of("status", "ok", "app", "TeamTodo", "version", "1.0.0",
+        sendJson(exchange, 200, Map.of("status", "ok", "app", "P-Todo", "version", "1.0.0",
                 "endpoints", List.of(
                         "GET /api/todos", "POST /api/todos", "PUT /api/todos/{id}", "DELETE /api/todos/{id}",
                         "POST /api/todos/{id}/complete", "GET /api/todos/{id}/comments", "POST /api/todos/{id}/comments",
@@ -177,9 +177,9 @@ public class ApiServer {
             }
             String path = (String) body.get("path");
             if (path == null || path.isBlank()) {
-                String dir = System.getProperty("user.home") + File.separator + "team-todo" + File.separator + "export";
+                String dir = System.getProperty("user.home") + File.separator + "P-Todo" + File.separator + "export";
                 new File(dir).mkdirs();
-                path = dir + File.separator + "team-todo-export." + format.toLowerCase();
+                path = dir + File.separator + "P-Todo-export." + format.toLowerCase();
             }
             File file = format.equalsIgnoreCase("json")
                     ? com.teamtodo.util.DataExporter.exportJson(new File(path))

@@ -276,7 +276,7 @@ public class MiniFrameController {
                 Scene scene = new Scene(root, 1200, 800);
                 Stage main = new Stage();
                 main.initStyle(StageStyle.DECORATED);
-                main.setTitle("TeamTodo");
+                main.setTitle("P-Todo");
                 main.setScene(scene);
                 main.show();
             } catch (IOException e) { log.error("打开主窗口失败", e); }

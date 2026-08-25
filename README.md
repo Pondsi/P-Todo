@@ -1,4 +1,4 @@
-# P-Todo (TeamTodo)
+# P-Todo
 
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue?logo=windows)
 ![Java](https://img.shields.io/badge/Java-25-orange?logo=openjdk)
@@ -57,8 +57,8 @@ Go to **[Releases](https://github.com/Pondsi/P-Todo/releases/tag/v1.0.0)** to do
 | File | Size | Description |
 |------|------|-------------|
 | `P-Todo.exe` | 24 MB | Standalone executable, no Java installation required |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | All-in-one JAR, requires Java 25+ |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | Source-only JAR, requires Java 25+ and JavaFX 26 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | All-in-one JAR, includes Java 25+ runtime, no installation needed |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | Source-only JAR, requires Java 25+ and JavaFX 26 |
 
 ### 🚀 Quick Start
 
@@ -74,7 +74,7 @@ mvn compile
 mvn package -DskipTests
 
 # Run
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 Or use the included scripts: `compile.bat` / `compile.ps1` (compile), `run_app.bat` (run), `run_debug.bat` (debug).
@@ -94,7 +94,7 @@ Or use the included scripts: `compile.bat` / `compile.ps1` (compile), `run_app.b
 ### 📁 Project Structure
 
 ```
-team-todo/
+P-Todo/
 ├── src/main/java/com/teamtodo/
 │   ├── App.java                    # Entry point
 │   ├── api/ApiServer.java          # REST API (port 9527)
@@ -119,7 +119,7 @@ team-todo/
 ### ⚙️ Database
 
 - **Engine:** SQLite with HikariCP connection pool
-- **Location:** `~/team-todo/data/team-todo.db`
+- **Location:** `~/P-Todo/data/P-Todo.db`
 - **Tables:** todos, users, comments, reminders, activity_log (reserved)
 
 ### 📚 Documentation
@@ -193,8 +193,8 @@ curl -X POST http://localhost:9527/api/todos \
 | 檔案 | 大小 | 說明 |
 |------|------|------|
 | `P-Todo.exe` | 24 MB | 獨立可執行檔，無需安裝 Java |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | 整合版 JAR，需要 Java 25+ |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | 僅原始碼 JAR，需要 Java 25+ 及 JavaFX 26 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | 整合版 JAR，已包含 Java 25+ 執行環境，無需安裝 |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | 僅原始碼 JAR，需要 Java 25+ 及 JavaFX 26 |
 
 ### 🚀 快速開始
 
@@ -205,7 +205,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 或使用內建腳本：`compile.bat` / `compile.ps1`（編譯）、`run_app.bat`（執行）、`run_debug.bat`（偵錯）。
@@ -225,7 +225,7 @@ java -jar target/team-todo-1.0.0.jar
 ### 📁 專案結構
 
 ```
-team-todo/
+P-Todo/
 ├── src/main/java/com/teamtodo/
 │   ├── App.java                    # 入口點
 │   ├── api/ApiServer.java          # REST API（連接埠 9527）
@@ -318,8 +318,8 @@ curl -X POST http://localhost:9527/api/todos \
 | ファイル | サイズ | 説明 |
 |---------|--------|------|
 | `P-Todo.exe` | 24 MB | スタンドアロン実行ファイル、Java不要 |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | オールインワンJAR、Java 25+ 必須 |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | ソースのみJAR、Java 25+ と JavaFX 26 必須 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | オールインワンJAR、Java 25+ を含む、インストール不要 |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | ソースのみJAR、Java 25+ と JavaFX 26 必須 |
 
 ### 🚀 クイックスタート
 
@@ -330,7 +330,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 または内蔵スクリプトを使用：`compile.bat` / `compile.ps1`（コンパイル）、`run_app.bat`（実行）、`run_debug.bat`（デバッグ）。
@@ -350,7 +350,7 @@ java -jar target/team-todo-1.0.0.jar
 ### 📁 プロジェクト構造
 
 ```
-team-todo/
+P-Todo/
 ├── src/main/java/com/teamtodo/
 │   ├── App.java                    # エントリポイント
 │   ├── api/ApiServer.java          # REST API（ポート9527）
@@ -435,8 +435,8 @@ curl -X POST http://localhost:9527/api/todos \
 | 파일 | 크기 | 설명 |
 |------|------|------|
 | `P-Todo.exe` | 24 MB | 스탠드얼론 실행 파일, Java 불필요 |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | 올인원 JAR, Java 25+ 필요 |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | 소스만 JAR, Java 25+ 및 JavaFX 26 필요 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | 올인원 JAR, Java 25+ 포함, 설치 불필요 필요 |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | 소스만 JAR, Java 25+ 및 JavaFX 26 필요 |
 
 ### 🚀 빠른 시작
 
@@ -447,7 +447,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 또는 내장 스크립트 사용: `compile.bat` / `compile.ps1` (컴파일), `run_app.bat` (실행), `run_debug.bat` (디버그).
@@ -467,7 +467,7 @@ java -jar target/team-todo-1.0.0.jar
 ### 📁 프로젝트 구조
 
 ```
-team-todo/
+P-Todo/
 ├── src/main/java/com/teamtodo/
 │   ├── App.java                    # 진입점
 │   ├── api/ApiServer.java          # REST API (포트 9527)
@@ -552,8 +552,8 @@ Rendez-vous sur **[Releases](https://github.com/Pondsi/P-Todo/releases/tag/v1.0.
 | Fichier | Taille | Description |
 |---------|--------|-------------|
 | `P-Todo.exe` | 24 Mo | Exécutable autonome, pas besoin de Java |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 Mo | JAR tout-en-un, nécessite Java 25+ |
-| `team-todo-1.0.0-source-only.jar` | 0.3 Mo | JAR source uniquement, nécessite Java 25+ et JavaFX 26 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 Mo | JAR tout-en-un, inclut Java 25+, aucune installation requise |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 Mo | JAR source uniquement, nécessite Java 25+ et JavaFX 26 |
 
 ### 🚀 Démarrage rapide
 
@@ -564,7 +564,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 Ou utilisez les scripts inclus : `compile.bat` / `compile.ps1` (compiler), `run_app.bat` (exécuter), `run_debug.bat` (déboguer).
@@ -634,8 +634,8 @@ Besuchen Sie **[Releases](https://github.com/Pondsi/P-Todo/releases/tag/v1.0.0)*
 | Datei | Größe | Beschreibung |
 |-------|-------|-------------|
 | `P-Todo.exe` | 24 MB | Eigenständige ausführbare Datei, kein Java nötig |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | All-in-One JAR, erfordert Java 25+ |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | Nur-Quellcode JAR, erfordert Java 25+ und JavaFX 26 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | All-in-One JAR, enthält Java 25+, keine Installation nötig |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | Nur-Quellcode JAR, erfordert Java 25+ und JavaFX 26 |
 
 ### 🚀 Schnellstart
 
@@ -646,7 +646,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 Oder verwenden Sie die mitgelieferten Skripte: `compile.bat` / `compile.ps1` (kompilieren), `run_app.bat` (ausführen), `run_debug.bat` (debuggen).
@@ -716,8 +716,8 @@ Visite **[Releases](https://github.com/Pondsi/P-Todo/releases/tag/v1.0.0)** para
 | Archivo | Tamaño | Descripción |
 |---------|--------|-------------|
 | `P-Todo.exe` | 24 MB | Ejecutable independiente, sin necesidad de Java |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | JAR todo-en-uno, requiere Java 25+ |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | JAR solo fuente, requiere Java 25+ y JavaFX 26 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | JAR todo-en-uno, incluye Java 25+, sin instalación |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | JAR solo fuente, requiere Java 25+ y JavaFX 26 |
 
 ### 🚀 Inicio rápido
 
@@ -728,7 +728,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 O use los scripts incluidos: `compile.bat` / `compile.ps1` (compilar), `run_app.bat` (ejecutar), `run_debug.bat` (depurar).
@@ -798,8 +798,8 @@ Acesse **[Releases](https://github.com/Pondsi/P-Todo/releases/tag/v1.0.0)** para
 | Arquivo | Tamanho | Descrição |
 |---------|---------|-----------|
 | `P-Todo.exe` | 24 MB | Executável independente, sem necessidade de Java |
-| `team-todo-1.0.0-all-in-one.jar` | 24.6 MB | JAR tudo-em-um, requer Java 25+ |
-| `team-todo-1.0.0-source-only.jar` | 0.3 MB | JAR apenas código-fonte, requer Java 25+ e JavaFX 26 |
+| `P-Todo-1.0.0-all-in-one.jar | 24.6 MB | JAR tudo-em-um, inclui Java 25+, sem necessidade de instalação |
+| `P-Todo-1.0.0-source-only.jar` | 0.3 MB | JAR apenas código-fonte, requer Java 25+ e JavaFX 26 |
 
 ### 🚀 Início rápido
 
@@ -810,7 +810,7 @@ git clone https://github.com/Pondsi/P-Todo.git
 cd P-Todo
 mvn compile
 mvn package -DskipTests
-java -jar target/team-todo-1.0.0.jar
+java -jar target/P-Todo-1.0.0.jar
 ```
 
 Ou use os scripts inclusos: `compile.bat` / `compile.ps1` (compilar), `run_app.bat` (executar), `run_debug.bat` (depurar).
