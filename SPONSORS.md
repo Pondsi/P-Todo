@@ -6,6 +6,12 @@ Your support helps maintain and improve this project. Thank you! 🙏
 
 ---
 
+## PayPal
+
+[https://paypal.me/pondsi](https://paypal.me/pondsi)
+
+---
+
 ## 微信支付 / WeChat Pay
 
 <img src="sponsors/wechat-pay.jpg" width="300" alt="WeChat Pay QR Code">
