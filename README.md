@@ -144,6 +144,8 @@ P-Todo/
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
+💖 [Sponsors](SPONSORS.md)
+
 ---
 
 ## 繁體中文
@@ -269,6 +271,8 @@ P-Todo/
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
+💖 [贊助者](SPONSORS.md)
+
 ---
 
 ## 日本語
@@ -385,6 +389,8 @@ P-Todo/
 ### 📄 ライセンス
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
+💖 [スポンサー](SPONSORS.md)
 
 ---
 
@@ -503,6 +509,8 @@ P-Todo/
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
+💖 [후원자](SPONSORS.md)
+
 ---
 
 ## Français
@@ -584,6 +592,8 @@ Ou utilisez les scripts inclus : `compile.bat` / `compile.ps1` (compiler), `run_
 ### 📄 Licence
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
+💖 [Sponsors](SPONSORS.md)
 
 ---
 
@@ -667,6 +677,8 @@ Oder verwenden Sie die mitgelieferten Skripte: `compile.bat` / `compile.ps1` (ko
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
+💖 [Sponsoren](SPONSORS.md)
+
 ---
 
 ## Español
@@ -749,6 +761,8 @@ O use los scripts incluidos: `compile.bat` / `compile.ps1` (compilar), `run_app.
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
+💖 [Patrocinadores](SPONSORS.md)
+
 ---
 
 ## Português
@@ -830,3 +844,5 @@ Ou use os scripts inclusos: `compile.bat` / `compile.ps1` (compilar), `run_app.b
 ### 📄 Licença
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
+💖 [Patrocinadores](SPONSORS.md)

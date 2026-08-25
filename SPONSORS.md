@@ -1,0 +1,26 @@
+# 💖 Sponsors
+
+If you find P-Todo helpful, consider supporting its development!
+
+Your support helps maintain and improve this project. Thank you! 🙏
+
+---
+
+## 微信支付 / WeChat Pay
+
+<img src="sponsors/wechat-pay.jpg" width="300" alt="WeChat Pay QR Code">
+
+## 支付宝 / Alipay
+
+<img src="sponsors/alipay.jpg" width="300" alt="Alipay QR Code">
+
+---
+
+## Other Ways to Support
+
+- ⭐ Star this repo — it helps others discover P-Todo
+- 🐛 Report issues or suggest features
+- 🔀 Submit pull requests
+- 📢 Share with friends and colleagues
+
+Thank you for your support! — **Pondsi**
