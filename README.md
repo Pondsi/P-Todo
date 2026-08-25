@@ -1,109 +1,30 @@
 # P-Todo 
 
-> A lightweight, high-performance desktop todo application for individuals and small teams, built with modern JavaFX.
-> 軽量・高性能なデスクトップタスク管理ツール。個人〜小規模チーム向けにモダンな JavaFX で構築。
-> Une application de gestion de tâches légère et performante pour le bureau, conçue pour les particuliers et les petites équipes avec JavaFX moderne.
-> 경량 고성능 데스크톱 할일 관리 앱. 개인 및 소규모 팀을 위해 모던 JavaFX로 구축.
-> Leichtgewichtige, leistungsstarke Desktop-ToDo-Anwendung für Einzelpersonen und kleine Teams, gebaut mit modernem JavaFX.
-> Una aplicación de tareas de escritorio ligera y de alto rendimiento para individuos y pequeños equipos, construida con JavaFX moderno.
-> Uma aplicação de tarefas de desktop leve e de alto desempenho para indivíduos e pequenas equipes, construída com JavaFX moderno.
+---
+
+## English
+
+A lightweight, high-performance desktop todo application for individuals and small teams, built with modern JavaFX.
 
 **Platform:** Windows | **Tech Stack:** Java 25 + JavaFX 26 + SQLite | **License:** MIT
-**プラットフォーム:** Windows | **技術スタック:** Java 25 + JavaFX 26 + SQLite | **ライセンス:** MIT
-**Plateforme:** Windows | **Stack technique:** Java 25 + JavaFX 26 + SQLite | **Licence:** MIT
-**플랫폼:** Windows | **기술 스택:** Java 25 + JavaFX 26 + SQLite | **라이선스:** MIT
-**Plattform:** Windows | **Tech-Stack:** Java 25 + JavaFX 26 + SQLite | **Lizenz:** MIT
-**Plataforma:** Windows | **Stack tecnológico:** Java 25 + JavaFX 26 + SQLite | **Licencia:** MIT
-**Plataforma:** Windows | **Stack:** Java 25 + JavaFX 26 + SQLite | **Licença:** MIT
 
----
+### Features
 
-## Features / 機能 / Fonctionnalités / 주요 기능 / Funktionen / Funcionalidades
+- **Task Management** — Create, edit, complete, delete tasks with rich metadata (priority, due date, assignee, tags)
+- **Color Priority System** — 4-tier color coding: Gray (None) → Green (Low) → Yellow (Medium) → Red (High/Urgent)
+- **Mini Window** — Always-on-top compact floating widget, no taskbar icon, drag-to-move, resizable
+- **Multi-View Dashboard** — List, Kanban Board, Calendar (with Lunar Calendar), Statistics, Dashboard
+- **9-Language i18n** — 中文, 繁體中文, English, 日本語, 조선어, Français, Deutsch, Español, Português
+- **REST API** — 18 endpoints on port 9527 for full CRUD, search, statistics, export, settings
+- **Notification Sound** — Sound alerts for due and overdue tasks, customizable audio files
 
-### Task Management / タスク管理 / Gestion des tâches / 할일 관리 / Aufgabenverwaltung / Gestión de tareas / Gerenciamento de tâches
+### Quick Start
 
-- **Create, edit, complete, delete** tasks with rich metadata (priority, due date, assignee, tags)
-- **作成、編集、完了、削除** — メタデータ（優先度、期限、担当者、タグ）付き
-- **Créer, modifier, compléter, supprimer** — avec métadonnées riches (priorité, date limite, assignataire, tags)
-- **생성, 편집, 완료, 삭제** — 풍부한 메타데이터 (우선순위, 마감일, 담당자, 태그)
-- **Erstellen, Bearbeiten, Abschließen, Löschen** — mit reichhaltigen Metadaten (Priorität, Fälligkeit, Zuständiger, Tags)
-- **Crear, editar, completar, eliminar** — con metadatos completos (prioridad, fecha límite, responsable, etiquetas)
-- **Criar, editar, concluir, excluir** — com metadados completos (prioridade, data limite, responsável, tags)
-
-### Color Priority System / カラー優先度システム / Système de couleurs / 색상 시스템 / Farbsystem / Sistema de colores / Sistema de cores
-
-- **4-tier color coding:** Gray (None) → Green (Low) → Yellow (Medium) → Red (High/Urgent)
-- **4段階カラーコーディング:** グレー（なし）→ 緑（低）→ 黄（中）→ 赤（高/緊急）
-- **Codage couleur à 4 niveaux:** Gris (Aucun) → Vert (Faible) → Jaune (Moyen) → Rouge (Élevé/Urgent)
-- **4단계 색상 코딩:** 회색(없음) → 녹색(낮음) → 노란색(보통) → 빨간색(높음/긴급)
-- **4-Stufen-Farbcodierung:** Grau (Keine) → Grün (Niedrig) → Gelb (Mittel) → Rot (Hoch/Dringend)
-- **Codificación por colores de 4 niveles:** Gris (Ninguno) → Verde (Bajo) → Amarillo (Medio) → Rojo (Alto/Urgente)
-- **Codificação por cores de 4 níveis:** Cinza (Nenhum) → Verde (Baixo) → Amarelo (Médio) → Vermelho (Alto/Urgente)
-
-### Mini Window / ミニウィンドウ / Mini fenêtre / 미니 창 / Mini-Fenster / Mini ventana / Mini janela
-
-- **Always-on-top compact floating widget** — no taskbar icon, drag-to-move, resizable
-- **常に最前面のコンパクトフローティングウィジェット** — タスクバー非表示、ドラッグ移動、リサイズ可能
-- **Widget flottant compact toujours au premier plan** — pas d'icône dans la barre des tâches, déplaçable, redimensionnable
-- **항상 최상위 플로팅 위젯** — 작업 표시줄 아이콘 없음, 드래그 이동, 크기 조절 가능
-- **Kompaktes, immer im Vordergrund schwebendes Widget** — kein Taskleistensymbol, verschiebbar, skalierbar
-- **Widget flotante compacto siempre visible** — sin icono en la barra de tareas, arrastrable, redimensionable
-- **Widget flutuante compacto sempre no topo** — sem ícone na barra de tarefas, arrastável, redimensionável
-
-### Multi-View Dashboard / 多視図ダッシュボード / Tableau de bord multi-vues / 다중 뷰 대시보드 / Mehransichten-Dashboard / Panel multi-vista / Painel multi-visualização
-
-- **5 views:** List, Kanban Board, Calendar (with Lunar Calendar), Statistics, Dashboard
-- **5つのビュー:** リスト、カンバン、カレンダー（旧暦付き）、統計、ダッシュボード
-- **5 vues :** Liste, tableau Kanban, calendrier (avec calendrier lunaire), statistiques, tableau de bord
-- **5개 뷰:** 목록, 칸반 보드, 달력(음력 포함), 통계, 대시보드
-- **5 Ansichten:** Liste, Kanban-Board, Kalender (mit Mondkalender), Statistiken, Dashboard
-- **5 vistas:** Lista, tablero Kanban, calendario (con calendario lunar), estadísticas, panel
-- **5 visualizações:** Lista, quadro Kanban, calendário (com calendário lunar), estatísticas, painel
-
-### 9-Language i18n / 9言語 i18n / Internationalisation 9 langues / 9개 언어 i18n / 9-Sprachen i18n / i18n de 9 idiomas / i18n de 9 idiomas
-
-- 中文 / 繁體中文 / English / 日本語 / 조선어 / Français / Deutsch / Español / Português
-- 繁體中文 / 简体中文 / English / 日本語 / 조선어 / Français / Deutsch / Español / Português
-
-### REST API for AI Agents / AI エージェント向け REST API / REST API pour agents IA / AI 에이전트용 REST API / REST API für KI-Agenten / REST API para agentes de IA / REST API para agentes de IA
-
-- **18 endpoints** on port 9527 — full CRUD, search, statistics, export, settings
-- **18エンドポイント** ポート9527 — 完全CRUD、検索、統計、エクスポート、設定
-- **18 points de terminaison** sur le port 9527 — CRUD complet, recherche, statistiques, exportation, paramètres
-- **18개 엔드포인트** 포트 9527 — 완전한 CRUD, 검색, 통계, 내보내기, 설정
-- **18 Endpunkte** auf Port 9527 — vollständiges CRUD, Suche, Statistiken, Export, Einstellungen
-- **18 endpoints** en el puerto 9527 — CRUD completo, búsqueda, estadísticas, exportación, configuración
-- **18 endpoints** na porta 9527 — CRUD completo, pesquisa, estatísticas, exportação, configurações
-
-### Notification Sound / 通知音 / Son de notification / 알림 소리 / Benachrichtigungston / Sonido de notificação / Som de notificação
-
-- **Sound alerts** for due and overdue tasks — customizable audio files
-- **サウンドアラート** — 期限到達・超過タスクに音声通知、カスタマイズ可能
-- **Alertes sonores** pour les tâches à échéance et en retard — fichiers audio personnalisables
-- **사운드 알림** — 마감 및 기한 초과 작업에 대한 음향 경고, 사용자 지정 가능
-- **Soundalarme** für fällige und überfällige Aufgaben — anpassbare Audiodateien
-- **Alertas sonoras** para tareas vencidas y atrasadas — archivos de audio personalizables
-- **Alertas sonoras** para tarefas vencidas e atrasadas — arquivos de áudio personalizáveis
-
----
-
-## Quick Start / クイックスタート / Démarrage rapide / 빠른 시작 / Schnellstart / Inicio rápido / Início rápido
-
-### Requirements / 前提条件 / Prérequis / 필수 조건 / Voraussetzungen / Requisitos / Requisitos
-
-- **Java 25+** (JDK) — [Download](https://jdk.java.net/)
-- **Maven 3.9+** — [Download](https://maven.apache.org/download.cgi)
-
-### Build & Run / ビルド＆実行 / Construction et exécution / 빌드 및 실행 / Erstellen & Ausführen / Compilar y ejecutar / Compilar e executar
+**Requirements:** Java 25+ (JDK), Maven 3.9+
 
 ```bash
-# 1. Compile / コンパイル / Compiler / 컴파일 / Kompilieren / Compilar / Compilar
 mvn compile
-
-# 2. Package / パッケージ / Empaqueter / 패키징 / Paketieren / Empaquetar / Empacotar
 mvn package -DskipTests
-
-# 3. Run / 実行 / Exécuter / 실행 / Ausführen / Ejecutar / Executar
 java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
   --add-modules javafx.controls,javafx.fxml,javafx.swing \
   --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
@@ -111,109 +32,719 @@ java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
   -cp target/classes com.teamtodo.App
 ```
 
-### Quick Scripts / クイックスクリプト / Scripts rapides / 빠른 스크립트 / Schnellscripts / Scripts rápidos / Scripts rápidos
+Or use the included scripts: `compile.bat` / `compile.ps1` (compile), `run_app.bat` (run), `run_debug.bat` (debug).
 
-| Script | Description | 説明 | Description | 설명 | Beschreibung | Descripción | Descrição |
-|--------|-------------|------|-------------|------|--------------|-------------|-----------|
-| `compile.bat` / `compile.ps1` | Compile project | プロジェクトをコンパイル | Compiler le projet | 프로젝트 컴파일 | Projekt kompilieren | Compilar proyecto | Compilar projeto |
-| `run_app.bat` | Run packaged jar | パッケージ済みjarを実行 | Exécuter le jar empaqueté | 패키징된 jar 실행 | Paketiertes jar ausführen | Ejecutar jar empaquetado | Executar jar empacotado |
-| `run_debug.bat` | Run debug mode | デバッグモードで実行 | Exécuter en mode débogage | 디버그 모드로 실행 | Debug-Modus ausführen | Ejecutar en modo depuración | Executar em modo de depuração |
-
----
-
-## Project Structure / プロジェクト構造 / Structure du projet / 프로젝트 구조 / Projektstruktur / Estructura del proyecto / Estrutura do projeto
+### Project Structure
 
 ```
 team-todo/
 ├── src/main/java/com/teamtodo/
-│   ├── App.java                          # Entry point / エントリポイント / Point d'entrée / 진입점 / Einstiegspunkt / Punto de entrada / Ponto de entrada
-│   ├── api/ApiServer.java                # REST API (port 9527) / REST API（ポート9527）
-│   ├── controller/                       # JavaFX controllers (10 files) / JavaFXコントローラー（10ファイル）
-│   ├── dao/                              # SQLite data access (5 files) / SQLiteデータアクセス（5ファイル）
-│   ├── model/                            # Data models + enums / データモデル + 列挙型
-│   ├── service/                          # Business logic (6 files) / ビジネスロジック（6ファイル）
-│   ├── sync/                             # Server sync / サーバー同期
-│   └── util/                             # Utilities / ユーティリティ（i18n、カレンダー、エクスポート等）
+│   ├── App.java                    # Entry point
+│   ├── api/ApiServer.java          # REST API (port 9527)
+│   ├── controller/                 # JavaFX controllers (10 files)
+│   ├── dao/                        # SQLite data access (5 files)
+│   ├── model/                      # Data models + enums
+│   ├── service/                    # Business logic (6 files)
+│   ├── sync/                       # Server sync
+│   └── util/                       # Utilities (i18n, calendar, export, etc.)
 ├── src/main/resources/
-│   ├── css/style.css                     # UI theme / UIテーマ
-│   ├── fxml/                             # 5 FXML layouts / FXMLレイアウト（5ファイル）
-│   ├── i18n/                             # 9 language files / 9言語ファイル
-│   └── icon.png                          # App icon / アプリアイコン
-├── tools/                                # i18n helper scripts / i18nヘルパースクリプト
-├── pom.xml                               # Maven config / Maven設定
-└── 说明.md                                # Full documentation (Chinese) / 説明書（中文）
+│   ├── css/style.css               # UI theme
+│   ├── fxml/                       # 5 FXML layouts
+│   ├── i18n/                       # 9 language files
+│   └── icon.png                    # App icon
+├── tools/                          # i18n helper scripts
+├── pom.xml                         # Maven config
+├── README.md                       # This file
+├── LICENSE                         # MIT License
+└── 说明.md                          # Full documentation (Chinese)
 ```
 
----
-
-## REST API Reference / REST API リファレンス / Référence REST API / REST API 참조 / REST-API-Referenz / Referencia REST API / Referência da REST API
+### REST API Reference
 
 **Base URL:** `http://localhost:9527`
 
-| Method | Endpoint | Description | 説明 | Description | 설명 | Beschreibung | Descripción | Descrição |
-|--------|----------|-------------|------|-------------|------|--------------|-------------|-----------|
-| GET | `/api/health` | Health check | ヘルスチェック | Vérification de santé | 상태 확인 | Gesundheitsprüfung | Verificación de salud | Verificação de saúde |
-| GET | `/api/todos` | List all todos | 全待办取得 | Lister toutes les tâches | 모든 할일 목록 | Alle Aufgaben auflisten | Listar todas las tareas | Listar todas as tarefas |
-| GET | `/api/todos/{id}` | Get single todo | 单个待办取得 | Obtenir une tâche | 단일 할일 조회 | Einzelne Aufgabe abrufen | Obtener una tarea | Obter uma tarefa |
-| POST | `/api/todos` | Create todo | 创建待办 | Créer une tâche | 할일 생성 | Aufgabe erstellen | Crear tarea | Criar tarefa |
-| PUT | `/api/todos/{id}` | Update todo | 更新待办 | Modifier une tâche | 할일 수정 | Aufgabe bearbeiten | Actualizar tarea | Atualizar tarefa |
-| DELETE | `/api/todos/{id}` | Delete todo | 删除待办 | Supprimer une tâche | 할일 삭제 | Aufgabe löschen | Eliminar tarea | Excluir tarefa |
-| POST | `/api/todos/{id}/complete` | Toggle completion | 切换完成状态 | Basculer l'achèvement | 완료 상태 전환 | Abschluss umschalten | Alternar finalización | Alternar conclusão |
-| GET | `/api/todos/{id}/comments` | Get comments | 获取评论 | Obtenir les commentaires | 댓글 조회 | Kommentare abrufen | Obtener comentarios | Obter comentários |
-| POST | `/api/todos/{id}/comments` | Add comment | 添加评论 | Ajouter un commentaire | 댓글 추가 | Kommentar hinzufügen | Añadir comentario | Adicionar comentário |
-| DELETE | `/api/comments/{id}` | Delete comment | 删除评论 | Supprimer un commentaire | 댓글 삭제 | Kommentar löschen | Eliminar comentario | Excluir comentário |
-| GET | `/api/users` | List users | 获取用户 | Lister les utilisateurs | 사용자 목록 | Benutzer auflisten | Listar usuarios | Listar usuários |
-| POST | `/api/users` | Create user | 创建用户 | Créer un utilisateur | 사용자 생성 | Benutzer erstellen | Crear usuario | Criar usuário |
-| PUT | `/api/users/{id}` | Update user | 更新用户 | Modifier un utilisateur | 사용자 수정 | Benutzer bearbeiten | Actualizar usuario | Atualizar usuário |
-| DELETE | `/api/users/{id}` | Delete user | 删除用户 | Supprimer un utilisateur | 사용자 삭제 | Benutzer löschen | Eliminar usuario | Excluir usuário |
-| GET | `/api/stats` | Statistics | 统计数据 | Statistiques | 통계 | Statistiken | Estadísticas | Estatísticas |
-| GET | `/api/search?q=` | Search todos | 搜索待办 | Rechercher des tâches | 할일 검색 | Aufgaben suchen | Buscar tareas | Pesquisar tarefas |
-| GET/POST | `/api/settings/language` | Language setting | 言語設定 | Paramètre de langue | 언어 설정 | Spracheinstellung | Configuración de idioma | Configuração de idioma |
-| POST | `/api/export` | Export data (JSON/CSV) | 数据导出 | Exporter les données | 데이터 내보내기 | Daten exportieren | Exportar datos | Exportar dados |
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/health` | Health check |
+| GET | `/api/todos` | List all todos |
+| GET | `/api/todos/{id}` | Get single todo |
+| POST | `/api/todos` | Create todo |
+| PUT | `/api/todos/{id}` | Update todo |
+| DELETE | `/api/todos/{id}` | Delete todo |
+| POST | `/api/todos/{id}/complete` | Toggle completion |
+| GET | `/api/todos/{id}/comments` | Get comments |
+| POST | `/api/todos/{id}/comments` | Add comment |
+| DELETE | `/api/comments/{id}` | Delete comment |
+| GET | `/api/users` | List users |
+| POST | `/api/users` | Create user |
+| PUT | `/api/users/{id}` | Update user |
+| DELETE | `/api/users/{id}` | Delete user |
+| GET | `/api/stats` | Statistics |
+| GET | `/api/search?q=` | Search todos |
+| GET/POST | `/api/settings/language` | Language setting |
+| POST | `/api/export` | Export data (JSON/CSV) |
+
+### Known Issues
+
+- IME candidate window does not follow cursor position (JavaFX 26 known issue)
+- High-DPI display may have drag offset on mini window
+
+### Documentation
+
+- [Full Documentation (说明.md)](说明.md) — Architecture, i18n guide, extension guide
+- [REST API Skill (SKILL.md)](SKILL.md) — For AI agent integration
+
+### License
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
 ---
 
-## API Usage Examples / API 使用例 / Exemples d'utilisation API / API 사용 예시 / API-Verwendungsbeispiele / Ejemplos de uso de API / Exemplos de uso da API
+## 繁體中文
+
+輕量、高效能的桌面待辦事項管理應用程式，專為個人和小型團隊設計，採用現代 JavaFX 構建。
+
+**平台：** Windows | **技術棧：** Java 25 + JavaFX 26 + SQLite | **授權條款：** MIT
+
+### 主要功能
+
+- **待辦管理** — 建立、編輯、完成、刪除任務，支援豐富的中繼資料（優先順序、截止日期、負責人、標籤）
+- **顏色優先順序系統** — 四級色彩編碼：灰色（無）→ 綠色（低）→ 黃色（中）→ 紅色（高/緊急）
+- **迷你視窗** — 永遠置頂的緊湊浮動小工具，不在工作列顯示圖示，可拖曳移動、調整大小
+- **多視圖儀表板** — 清單、看板、日曆（含農曆）、統計、儀表板
+- **9 語言國際化** — 中文、繁體中文、English、日本語、조선어、Français、Deutsch、Español、Português
+- **REST API** — 18 個端點，連接埠 9527，完整 CRUD、搜尋、統計、匯出、設定
+- **通知音效** — 逾期和到期任務的聲音提醒，可自訂音訊檔案
+
+### 快速開始
+
+**系統需求：** Java 25+（JDK）、Maven 3.9+
 
 ```bash
-# Create a todo / 待办を作成 / Créer une tâche / 할일 생성
-curl -X POST http://localhost:9527/api/todos \
-  -H "Content-Type: application/json" \
-  -d '{"title":"Buy groceries","priority":"HIGH","assignee_id":"user-001"}'
-
-# List all todos / 全待办取得 / Lister toutes les tâches / 모든 할일 목록
-curl http://localhost:9527/api/todos
-
-# Toggle completion / 完了状態切替 / Basculer l'achèvement / 완료 상태 전환
-curl -X POST http://localhost:9527/api/todos/{id}/complete
-
-# Search todos / 待办検索 / Rechercher des tâches / 할일 검색
-curl "http://localhost:9527/api/search?q=keyword"
-
-# Export as CSV / CSV出力 / Exporter en CSV / CSV로 내보내기
-curl -X POST http://localhost:9527/api/export \
-  -H "Content-Type: application/json" \
-  -d '{"format":"csv","path":"./export.csv"}'
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
 ```
 
+或使用內建腳本：`compile.bat` / `compile.ps1`（編譯）、`run_app.bat`（執行）、`run_debug.bat`（偵錯）。
+
+### 專案結構
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # 入口點
+│   ├── api/ApiServer.java          # REST API（連接埠 9527）
+│   ├── controller/                 # JavaFX 控制器（10 個檔案）
+│   ├── dao/                        # SQLite 資料存取（5 個檔案）
+│   ├── model/                      # 資料模型 + 列舉
+│   ├── service/                    # 業務邏輯（6 個檔案）
+│   ├── sync/                       # 伺服器同步
+│   └── util/                       # 工具類（國際化、日曆、匯出等）
+├── src/main/resources/
+│   ├── css/style.css               # UI 主題
+│   ├── fxml/                       # 5 個 FXML 佈局
+│   ├── i18n/                       # 9 種語言檔案
+│   └── icon.png                    # 應用圖示
+├── tools/                          # 國際化輔助腳本
+├── pom.xml                         # Maven 設定
+├── README.md                       # 本檔案
+├── LICENSE                         # MIT 授權條款
+└── 说明.md                          # 完整中文文件
+```
+
+### REST API 參考
+
+**基礎 URL：** `http://localhost:9527`
+
+| 方法 | 端點 | 說明 |
+|------|------|------|
+| GET | `/api/health` | 健康檢查 |
+| GET | `/api/todos` | 取得所有待辦 |
+| GET | `/api/todos/{id}` | 取得單個待辦 |
+| POST | `/api/todos` | 建立待辦 |
+| PUT | `/api/todos/{id}` | 更新待辦 |
+| DELETE | `/api/todos/{id}` | 刪除待辦 |
+| POST | `/api/todos/{id}/complete` | 切換完成狀態 |
+| GET | `/api/todos/{id}/comments` | 取得評論 |
+| POST | `/api/todos/{id}/comments` | 新增評論 |
+| DELETE | `/api/comments/{id}` | 刪除評論 |
+| GET | `/api/users` | 取得使用者 |
+| POST | `/api/users` | 建立使用者 |
+| PUT | `/api/users/{id}` | 更新使用者 |
+| DELETE | `/api/users/{id}` | 刪除使用者 |
+| GET | `/api/stats` | 統計資料 |
+| GET | `/api/search?q=` | 搜尋待辦 |
+| GET/POST | `/api/settings/language` | 語言設定 |
+| POST | `/api/export` | 匯出資料（JSON/CSV） |
+
+### 已知問題
+
+- IME 候選視窗不跟隨游標位置（JavaFX 26 已知問題）
+- 高 DPI 顯示器上迷你視窗拖曳可能有偏移
+
+### 授權條款
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
 ---
 
-## Known Issues / 既知の問題 / Problèmes connus / 알려진 문제 / Bekannte Probleme / Problemas conocidos / Problemas conhecidos
+## 日本語
 
-| Issue | 描述 | 説明 | Description | 설명 | Beschreibung | Descripción | Descripción |
-|-------|------|------|-------------|------|--------------|-------------|-------------|
-| IME Window | Candidate window does not follow cursor (JavaFX 26 bug) | 候補ウィンドウがカーソルに追従しない（JavaFX 26の既知バグ） | La fenêtre de candidat ne suit pas le curseur (bug JavaFX 26) | 후보 창이 커서를 따라가지 않음 (JavaFX 26 버그) | Kandidatenfenster folgt dem Cursor nicht (JavaFX 26 Bug) | La ventana de candidatos no sigue al cursor (error conocido de JavaFX 26) | A janela de candidatos não segue o cursor (bug conhecido do JavaFX 26) |
-| High-DPI | Mini window drag offset on high-DPI displays | 高DPI表示でミニウィンドウのドラッグにオフセットが発生 | Décalage de glissement de la mini-fenêtre sur les écrans haute DPI | 고DPI 디스플레이에서 미니 창 드래그 오프셋 발생 | Verschiebungsoffset des Mini-Fensters auf High-DPI-Displays | Desplazamiento al arrastrar mini ventana en pantallas de alta DPI | Deslocamento ao arrastar mini janela em telas de alta DPI |
+軽量・高性能なデスクトップ用タスク管理アプリケーション。個人〜小規模チーム向けにモダンな JavaFX で構築。
+
+**プラットフォーム：** Windows | **技術スタック：** Java 25 + JavaFX 26 + SQLite | **ライセンス：** MIT
+
+### 主な機能
+
+- **タスク管理** — 作成、編集、完了、削除、担当者指定。優先度、期限、タグなどの豊富なメタデータをサポート
+- **カラー優先度システム** — 4段階カラーコーディング：グレー（なし）→ 緑（低）→ 黄（中）→ 赤（高/緊急）
+- **ミニウィンドウ** — 常に最前面のコンパクトなフローティングウィジェット。タスクバーにアイコン非表示、ドラッグ移動、リサイズ可能
+- **マルチビューダッシュボード** — リスト、カンバン、カレンダー（旧暦対応）、統計、ダッシュボード
+- **9言語国際化** — 中文、繁體中文、English、日本語、조선어、Français、Deutsch、Español、Português
+- **REST API** — ポート9527で18エンドポイント。完全なCRUD、検索、統計、エクスポート、設定
+- **通知音** — 期限到達・超過タスクのサウンドアラート、カスタマイズ可能
+
+### クイックスタート
+
+**前提条件：** Java 25+（JDK）、Maven 3.9+
+
+```bash
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
+```
+
+または内蔵スクリプトを使用：`compile.bat` / `compile.ps1`（コンパイル）、`run_app.bat`（実行）、`run_debug.bat`（デバッグ）。
+
+### プロジェクト構造
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # エントリポイント
+│   ├── api/ApiServer.java          # REST API（ポート9527）
+│   ├── controller/                 # JavaFXコントローラー（10ファイル）
+│   ├── dao/                        # SQLiteデータアクセス（5ファイル）
+│   ├── model/                      # データモデル + 列挙型
+│   ├── service/                    # ビジネスロジック（6ファイル）
+│   ├── sync/                       # サーバー同期
+│   └── util/                       # ユーティリティ（i18n、カレンダー、エクスポート等）
+├── src/main/resources/
+│   ├── css/style.css               # UIテーマ
+│   ├── fxml/                       # FXMLレイアウト（5ファイル）
+│   ├── i18n/                       # 9言語ファイル
+│   └── icon.png                    # アプリアイコン
+├── tools/                          # i18nヘルパースクリプト
+├── pom.xml                         # Maven設定
+├── README.md                       # 本ファイル
+├── LICENSE                         # MITライセンス
+└── 说明.md                          # 完全な説明書（中文）
+```
+
+### REST APIリファレンス
+
+**ベースURL：** `http://localhost:9527`
+
+| メソッド | エンドポイント | 説明 |
+|----------|----------------|------|
+| GET | `/api/health` | ヘルスチェック |
+| GET | `/api/todos` | 全タスク取得 |
+| GET | `/api/todos/{id}` | 単一タスク取得 |
+| POST | `/api/todos` | タスク作成 |
+| PUT | `/api/todos/{id}` | タスク更新 |
+| DELETE | `/api/todos/{id}` | タスク削除 |
+| POST | `/api/todos/{id}/complete` | 完了状態切替 |
+| GET | `/api/todos/{id}/comments` | コメント取得 |
+| POST | `/api/todos/{id}/comments` | コメント追加 |
+| DELETE | `/api/comments/{id}` | コメント削除 |
+| GET | `/api/users` | ユーザー一覧 |
+| POST | `/api/users` | ユーザー作成 |
+| PUT | `/api/users/{id}` | ユーザー更新 |
+| DELETE | `/api/users/{id}` | ユーザー削除 |
+| GET | `/api/stats` | 統計データ |
+| GET | `/api/search?q=` | タスク検索 |
+| GET/POST | `/api/settings/language` | 言語設定 |
+| POST | `/api/export` | データエクスポート（JSON/CSV） |
+
+### 既知の問題
+
+- IME候補ウィンドウがカーソルに追従しない（JavaFX 26の既知バグ）
+- 高DPI表示でミニウィンドウのドラッグにオフセットが発生
+
+### ライセンス
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
 ---
 
-## Documentation / ドキュメント / Documentation / 문서 / Dokumentation / Documentación / Documentação
+## 조선어
 
-- **[Full Documentation (说明.md)](说明.md)** — Architecture, i18n guide, extension guide, known issues / アーキテクチャ、i18nガイド、拡張ガイド、既知の問題
-- **[REST API Skill (SKILL.md)](SKILL.md)** — For AI agent integration / AIエージェント連携用
+경량·고성능 데스크톱 할일 관리 앱. 개인 및 소규모 팀을 위해 모던 JavaFX로 구축.
+
+**플랫폼:** Windows | **기술 스택:** Java 25 + JavaFX 26 + SQLite | **라이선스:** MIT
+
+### 주요 기능
+
+- **할일 관리** — 생성, 편집, 완료, 삭제. 우선순위, 마감일, 담당자, 태그 등 풍부한 메타데이터 지원
+- **색상 우선순위 시스템** — 4단계 색상 코딩: 회색(없음) → 녹색(낮음) → 노란색(보통) → 빨간색(높음/긴급)
+- **미니 창** — 항상 최상위의 컴팩트한 플로팅 위젯. 작업 표시줄 아이콘 없음, 드래그 이동, 크기 조절 가능
+- **다중 뷰 대시보드** — 목록, 칸반 보드, 달력(음력 포함), 통계, 대시보드
+- **9개 언어 국제화** — 中文, 繁體中文, English, 日本語, 조선어, Français, Deutsch, Español, Português
+- **REST API** — 포트 9527에 18개 엔드포인트. 완전한 CRUD, 검색, 통계, 내보내기, 설정
+- **알림 소리** — 마감 및 기한 초과 작업에 대한 사운드 알림, 사용자 지정 가능
+
+### 빠른 시작
+
+**필수 조건:** Java 25+ (JDK), Maven 3.9+
+
+```bash
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
+```
+
+또는 내장 스크립트 사용: `compile.bat` / `compile.ps1` (컴파일), `run_app.bat` (실행), `run_debug.bat` (디버그).
+
+### 프로젝트 구조
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # 진입점
+│   ├── api/ApiServer.java          # REST API (포트 9527)
+│   ├── controller/                 # JavaFX 컨트롤러 (10개 파일)
+│   ├── dao/                        # SQLite 데이터 액세스 (5개 파일)
+│   ├── model/                      # 데이터 모델 + 열거형
+│   ├── service/                    # 비즈니스 로직 (6개 파일)
+│   ├── sync/                       # 서버 동기화
+│   └── util/                       # 유틸리티 (다국어, 달력, 내보내기 등)
+├── src/main/resources/
+│   ├── css/style.css               # UI 테마
+│   ├── fxml/                       # FXML 레이아웃 (5개 파일)
+│   ├── i18n/                       # 9개 언어 파일
+│   └── icon.png                    # 앱 아이콘
+├── tools/                          # 다국어 도움말 스크립트
+├── pom.xml                         # Maven 설정
+├── README.md                       # 이 파일
+├── LICENSE                         # MIT 라이선스
+└── 说明.md                          # 전체 문서 (중국어)
+```
+
+### REST API 참조
+
+**기본 URL:** `http://localhost:9527`
+
+| 메서드 | 엔드포인트 | 설명 |
+|--------|-----------|------|
+| GET | `/api/health` | 상태 확인 |
+| GET | `/api/todos` | 모든 할일 목록 |
+| GET | `/api/todos/{id}` | 단일 할일 조회 |
+| POST | `/api/todos` | 할일 생성 |
+| PUT | `/api/todos/{id}` | 할일 수정 |
+| DELETE | `/api/todos/{id}` | 할일 삭제 |
+| POST | `/api/todos/{id}/complete` | 완료 상태 전환 |
+| GET | `/api/todos/{id}/comments` | 댓글 조회 |
+| POST | `/api/todos/{id}/comments` | 댓글 추가 |
+| DELETE | `/api/comments/{id}` | 댓글 삭제 |
+| GET | `/api/users` | 사용자 목록 |
+| POST | `/api/users` | 사용자 생성 |
+| PUT | `/api/users/{id}` | 사용자 수정 |
+| DELETE | `/api/users/{id}` | 사용자 삭제 |
+| GET | `/api/stats` | 통계 |
+| GET | `/api/search?q=` | 할일 검색 |
+| GET/POST | `/api/settings/language` | 언어 설정 |
+| POST | `/api/export` | 데이터 내보내기 (JSON/CSV) |
+
+### 알려진 문제
+
+- IME 후보 창이 커서를 따라가지 않음 (JavaFX 26 알려진 버그)
+- 고DPI 디스플레이에서 미니 창 드래그 오프셋 발생 가능
+
+### 라이선스
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
 
 ---
 
-## License / ライセンス / Licence / 라이선스 / Lizenz / Licencia / Licença
+## Français
+
+Application légère et performante de gestion de tâches de bureau, conçue pour les particuliers et les petites équipes avec JavaFX moderne.
+
+**Plateforme :** Windows | **Stack technique :** Java 25 + JavaFX 26 + SQLite | **Licence :** MIT
+
+### Fonctionnalités
+
+- **Gestion des tâches** — Créer, modifier, compléter, supprimer des tâches avec des métadonnées riches (priorité, date limite, assignataire, tags)
+- **Système de couleurs** — Codage couleur à 4 niveaux : Gris (Aucun) → Vert (Faible) → Jaune (Moyen) → Rouge (Élevé/Urgent)
+- **Mini fenêtre** — Widget flottant compact toujours au premier plan, pas d'icône dans la barre des tâches, déplaçable, redimensionnable
+- **Tableau de bord multi-vues** — Liste, tableau Kanban, calendrier (avec calendrier lunaire), statistiques, tableau de bord
+- **Internationalisation 9 langues** — 中文, 繁體中文, English, 日本語,조선어, Français, Deutsch, Español, Português
+- **REST API** — 18 points de terminaison sur le port 9527, CRUD complet, recherche, statistiques, exportation, paramètres
+- **Son de notification** — Alertes sonores pour les tâches à échéance et en retard, fichiers audio personnalisables
+
+### Démarrage rapide
+
+**Prérequis :** Java 25+ (JDK), Maven 3.9+
+
+```bash
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
+```
+
+Ou utilisez les scripts inclus : `compile.bat` / `compile.ps1` (compiler), `run_app.bat` (exécuter), `run_debug.bat` (déboguer).
+
+### Structure du projet
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # Point d'entrée
+│   ├── api/ApiServer.java          # REST API (port 9527)
+│   ├── controller/                 # Contrôleurs JavaFX (10 fichiers)
+│   ├── dao/                        # Accès données SQLite (5 fichiers)
+│   ├── model/                      # Modèles de données + énumérations
+│   ├── service/                    # Logique métier (6 fichiers)
+│   ├── sync/                       # Synchronisation serveur
+│   └── util/                       # Utilitaires (i18n, calendrier, export, etc.)
+├── src/main/resources/
+│   ├── css/style.css               # Thème UI
+│   ├── fxml/                       # 5 layouts FXML
+│   ├── i18n/                       # 9 fichiers de langue
+│   └── icon.png                    # Icône de l'application
+├── tools/                          # Scripts d'aide i18n
+├── pom.xml                         # Configuration Maven
+├── README.md                       # Ce fichier
+├── LICENSE                         # Licence MIT
+└── 说明.md                          # Documentation complète (chinois)
+```
+
+### Référence REST API
+
+**URL de base :** `http://localhost:9527`
+
+| Méthode | Point de terminaison | Description |
+|---------|---------------------|-------------|
+| GET | `/api/health` | Vérification de santé |
+| GET | `/api/todos` | Lister toutes les tâches |
+| GET | `/api/todos/{id}` | Obtenir une tâche |
+| POST | `/api/todos` | Créer une tâche |
+| PUT | `/api/todos/{id}` | Modifier une tâche |
+| DELETE | `/api/todos/{id}` | Supprimer une tâche |
+| POST | `/api/todos/{id}/complete` | Basculer l'achèvement |
+| GET | `/api/todos/{id}/comments` | Obtenir les commentaires |
+| POST | `/api/todos/{id}/comments` | Ajouter un commentaire |
+| DELETE | `/api/comments/{id}` | Supprimer un commentaire |
+| GET | `/api/users` | Lister les utilisateurs |
+| POST | `/api/users` | Créer un utilisateur |
+| PUT | `/api/users/{id}` | Modifier un utilisateur |
+| DELETE | `/api/users/{id}` | Supprimer un utilisateur |
+| GET | `/api/stats` | Statistiques |
+| GET | `/api/search?q=` | Rechercher des tâches |
+| GET/POST | `/api/settings/language` | Paramètre de langue |
+| POST | `/api/export` | Exporter les données (JSON/CSV) |
+
+### Problèmes connus
+
+- La fenêtre de candidat IME ne suit pas le curseur (bug connu de JavaFX 26)
+- Décalage de glissement possible sur les écrans haute DPI
+
+### Licence
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
+---
+
+## Deutsch
+
+Leichtgewichtige, leistungsstarke Desktop-ToDo-Anwendung für Einzelpersonen und kleine Teams, gebaut mit modernem JavaFX.
+
+**Plattform:** Windows | **Tech-Stack:** Java 25 + JavaFX 26 + SQLite | **Lizenz:** MIT
+
+### Funktionen
+
+- **Aufgabenverwaltung** — Erstellen, Bearbeiten, Abschließen, Löschen mit reichhaltigen Metadaten (Priorität, Fälligkeit, Zuständiger, Tags)
+- **Farbsystem** — 4-Stufen-Farbcodierung: Grau (Keine) → Grün (Niedrig) → Gelb (Mittel) → Rot (Hoch/Dringend)
+- **Mini-Fenster** — Kompaktes, immer im Vordergrund schwebendes Widget, kein Taskleistensymbol, verschiebbar, skalierbar
+- **Mehransichten-Dashboard** — Liste, Kanban-Board, Kalender (mit Mondkalender), Statistiken, Dashboard
+- **9-Sprachen-i18n** — 中文, 繁體中文, English, 日本語, 조선어, Français, Deutsch, Español, Português
+- **REST API** — 18 Endpunkte auf Port 9527, vollständiges CRUD, Suche, Statistiken, Export, Einstellungen
+- **Benachrichtigungston** — Soundalarme für fällige und überfällige Aufgaben, anpassbare Audiodateien
+
+### Schnellstart
+
+**Voraussetzungen:** Java 25+ (JDK), Maven 3.9+
+
+```bash
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
+```
+
+Oder verwenden Sie die mitgelieferten Skripte: `compile.bat` / `compile.ps1` (kompilieren), `run_app.bat` (ausführen), `run_debug.bat` (debuggen).
+
+### Projektstruktur
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # Einstiegspunkt
+│   ├── api/ApiServer.java          # REST API (Port 9527)
+│   ├── controller/                 # JavaFX-Controller (10 Dateien)
+│   ├── dao/                        # SQLite-Datenzugriff (5 Dateien)
+│   ├── model/                      # Datenmodelle + Enums
+│   ├── service/                    // Geschäftslogik (6 Dateien)
+│   ├── sync/                       # Server-Synchronisation
+│   └── util/                       # Hilfsprogramme (i18n, Kalender, Export, etc.)
+├── src/main/resources/
+│   ├── css/style.css               # UI-Design
+│   ├── fxml/                       # 5 FXML-Layouts
+│   ├── i18n/                       # 9 Sprachdateien
+│   └── icon.png                    # App-Symbol
+├── tools/                          # i18n-Hilfsskripte
+├── pom.xml                         # Maven-Konfiguration
+├── README.md                       # Diese Datei
+├── LICENSE                         # MIT-Lizenz
+└── 说明.md                          # Vollständige Dokumentation (Chinesisch)
+```
+
+### REST-API-Referenz
+
+**Basis-URL:** `http://localhost:9527`
+
+| Methode | Endpunkt | Beschreibung |
+|---------|----------|--------------|
+| GET | `/api/health` | Gesundheitsprüfung |
+| GET | `/api/todos` | Alle Aufgaben auflisten |
+| GET | `/api/todos/{id}` | Einzelne Aufgabe abrufen |
+| POST | `/api/todos` | Aufgabe erstellen |
+| PUT | `/api/todos/{id}` | Aufgabe bearbeiten |
+| DELETE | `/api/todos/{id}` | Aufgabe löschen |
+| POST | `/api/todos/{id}/complete` | Abschluss umschalten |
+| GET | `/api/todos/{id}/comments` | Kommentare abrufen |
+| POST | `/api/todos/{id}/comments` | Kommentar hinzufügen |
+| DELETE | `/api/comments/{id}` | Kommentar löschen |
+| GET | `/api/users` | Benutzer auflisten |
+| POST | `/api/users` | Benutzer erstellen |
+| PUT | `/api/users/{id}` | Benutzer bearbeiten |
+| DELETE | `/api/users/{id}` | Benutzer löschen |
+| GET | `/api/stats` | Statistiken |
+| GET | `/api/search?q=` | Aufgaben suchen |
+| GET/POST | `/api/settings/language` | Spracheinstellung |
+| POST | `/api/export` | Daten exportieren (JSON/CSV) |
+
+### Bekannte Probleme
+
+- IME-Kandidatenfenster folgt dem Cursor nicht (bekannter JavaFX 26-Bug)
+- Verschiebungsoffset des Mini-Fensters auf High-DPI-Displays möglich
+
+### Lizenz
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
+---
+
+## Español
+
+Herramienta de gestión de tareas de escritorio ligera y de alto rendimiento para individuos y pequeños equipos, construida con JavaFX moderno.
+
+**Plataforma:** Windows | **Stack tecnológico:** Java 25 + JavaFX 26 + SQLite | **Licencia:** MIT
+
+### Características
+
+- **Gestión de tareas** — Crear, editar, completar, eliminar con metadatos completos (prioridad, fecha límite, responsable, etiquetas)
+- **Sistema de colores** — Codificación por colores de 4 niveles: Gris (Ninguno) → Verde (Bajo) → Amarillo (Medio) → Rojo (Alto/Urgente)
+- **Mini ventana** — Widget flotante compacto siempre visible, sin icono en la barra de tareas, arrastrable, redimensionable
+- **Panel multi-vista** — Lista, tablero Kanban, calendario (con calendario lunar), estadísticas, panel
+- **i18n de 9 idiomas** — 中文, 繁體中文, English, 日本語, 조선어, Français, Deutsch, Español, Português
+- **REST API** — 18 endpoints en el puerto 9527, CRUD completo, búsqueda, estadísticas, exportación, configuración
+- **Sonido de notificación** — Alertas sonoras para tareas vencidas y atrasadas, archivos de audio personalizables
+
+### Inicio rápido
+
+**Requisitos:** Java 25+ (JDK), Maven 3.9+
+
+```bash
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
+```
+
+O use los scripts incluidos: `compile.bat` / `compile.ps1` (compilar), `run_app.bat` (ejecutar), `run_debug.bat` (depurar).
+
+### Estructura del proyecto
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # Punto de entrada
+│   ├── api/ApiServer.java          # REST API (puerto 9527)
+│   ├── controller/                 # Controladores JavaFX (10 archivos)
+│   ├── dao/                        # Acceso a datos SQLite (5 archivos)
+│   ├── model/                      # Modelos de datos + enumeraciones
+│   ├── service/                    # Lógica de negocio (6 archivos)
+│   ├── sync/                       # Sincronización con servidor
+│   └── util/                       # Utilidades (i18n, calendario, exportación, etc.)
+├── src/main/resources/
+│   ├── css/style.css               # Tema de interfaz
+│   ├── fxml/                       # 5 diseños FXML
+│   ├── i18n/                       # 9 archivos de idioma
+│   └── icon.png                    # Icono de la aplicación
+├── tools/                          # Scripts auxiliares de i18n
+├── pom.xml                         # Configuración de Maven
+├── README.md                       # Este archivo
+├── LICENSE                         # Licencia MIT
+└── 说明.md                          # Documentación completa (chino)
+```
+
+### Referencia REST API
+
+**URL base:** `http://localhost:9527`
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| GET | `/api/health` | Verificación de salud |
+| GET | `/api/todos` | Listar todas las tareas |
+| GET | `/api/todos/{id}` | Obtener una tarea |
+| POST | `/api/todos` | Crear tarea |
+| PUT | `/api/todos/{id}` | Actualizar tarea |
+| DELETE | `/api/todos/{id}` | Eliminar tarea |
+| POST | `/api/todos/{id}/complete` | Alternar finalización |
+| GET | `/api/todos/{id}/comments` | Obtener comentarios |
+| POST | `/api/todos/{id}/comments` | Añadir comentario |
+| DELETE | `/api/comments/{id}` | Eliminar comentario |
+| GET | `/api/users` | Listar usuarios |
+| POST | `/api/users` | Crear usuario |
+| PUT | `/api/users/{id}` | Actualizar usuario |
+| DELETE | `/api/users/{id}` | Eliminar usuario |
+| GET | `/api/stats` | Estadísticas |
+| GET | `/api/search?q=` | Buscar tareas |
+| GET/POST | `/api/settings/language` | Configuración de idioma |
+| POST | `/api/export` | Exportar datos (JSON/CSV) |
+
+### Problemas conocidos
+
+- La ventana de candidatos IME no sigue al cursor (error conocido de JavaFX 26)
+- Desplazamiento al arrastrar mini ventana en pantallas de alta DPI
+
+### Licencia
+
+[MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
+
+---
+
+## Português
+
+Ferramenta de gerenciamento de tarefas de desktop leve e de alto desempenho para indivíduos e pequenas equipes, construída com JavaFX moderno.
+
+**Plataforma:** Windows | **Stack:** Java 25 + JavaFX 26 + SQLite | **Licença:** MIT
+
+### Funcionalidades
+
+- **Gerenciamento de tarefas** — Criar, editar, concluir, excluir com metadados completos (prioridade, data limite, responsável, tags)
+- **Sistema de cores** — Codificação por cores de 4 níveis: Cinza (Nenhum) → Verde (Baixo) → Amarelo (Médio) → Vermelho (Alto/Urgente)
+- **Mini janela** — Widget flutuante compacto sempre no topo, sem ícone na barra de tarefas, arrastável, redimensionável
+- **Painel multi-visualização** — Lista, quadro Kanban, calendário (com calendário lunar), estatísticas, painel
+- **i18n de 9 idiomas** — 中文, 繁體中文, English, 日本語, 조선어, Français, Deutsch, Español, Português
+- **REST API** — 18 endpoints na porta 9527, CRUD completo, pesquisa, estatísticas, exportação, configurações
+- **Som de notificação** — Alertas sonoros para tarefas vencidas e atrasadas, arquivos de áudio personalizáveis
+
+### Início rápido
+
+**Pré-requisitos:** Java 25+ (JDK), Maven 3.9+
+
+```bash
+mvn compile
+mvn package -DskipTests
+java --module-path "target/classes;PATH_TO_JAVAFX/lib" \
+  --add-modules javafx.controls,javafx.fxml,javafx.swing \
+  --add-opens com.teamtodo/com.teamtodo.dao=ALL-UNNAMED \
+  --add-opens com.teamtodo/com.teamtodo.model=ALL-UNNAMED \
+  -cp target/classes com.teamtodo.App
+```
+
+Ou use os scripts inclusos: `compile.bat` / `compile.ps1` (compilar), `run_app.bat` (executar), `run_debug.bat` (depurar).
+
+### Estrutura do projeto
+
+```
+team-todo/
+├── src/main/java/com/teamtodo/
+│   ├── App.java                    # Ponto de entrada
+│   ├── api/ApiServer.java          # REST API (porta 9527)
+│   ├── controller/                 # Controladores JavaFX (10 arquivos)
+│   ├── dao/                        # Acesso a dados SQLite (5 arquivos)
+│   ├── model/                      # Modelos de dados + enumerações
+│   ├── service/                    # Lógica de negócio (6 arquivos)
+│   ├── sync/                       # Sincronização com servidor
+│   └── util/                       # Utilidades (i18n, calendário, exportação, etc.)
+├── src/main/resources/
+│   ├── css/style.css               # Tema da interface
+│   ├── fxml/                       # 5 layouts FXML
+│   ├── i18n/                       # 9 arquivos de idioma
+│   └── icon.png                    # Ícone do aplicativo
+├── tools/                          # Scripts auxiliares de i18n
+├── pom.xml                         # Configuração do Maven
+├── README.md                       # Este arquivo
+├── LICENSE                         # Licença MIT
+└── 说明.md                          # Documentação completa (chinês)
+```
+
+### Referência da REST API
+
+**URL base:** `http://localhost:9527`
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| GET | `/api/health` | Verificação de saúde |
+| GET | `/api/todos` | Listar todas as tarefas |
+| GET | `/api/todos/{id}` | Obter uma tarefa |
+| POST | `/api/todos` | Criar tarefa |
+| PUT | `/api/todos/{id}` | Atualizar tarefa |
+| DELETE | `/api/todos/{id}` | Excluir tarefa |
+| POST | `/api/todos/{id}/complete` | Alternar conclusão |
+| GET | `/api/todos/{id}/comments` | Obter comentários |
+| POST | `/api/todos/{id}/comments` | Adicionar comentário |
+| DELETE | `/api/comments/{id}` | Excluir comentário |
+| GET | `/api/users` | Listar usuários |
+| POST | `/api/users` | Criar usuário |
+| PUT | `/api/users/{id}` | Atualizar usuário |
+| DELETE | `/api/users/{id}` | Excluir usuário |
+| GET | `/api/stats` | Estatísticas |
+| GET | `/api/search?q=` | Pesquisar tarefas |
+| GET/POST | `/api/settings/language` | Configuração de idioma |
+| POST | `/api/export` | Exportar dados (JSON/CSV) |
+
+### Problemas conhecidos
+
+- A janela de candidatos IME não segue o cursor (bug conhecido do JavaFX 26)
+- Deslocamento ao arrastar mini janela em telas de alta DPI
+
+### Licença
 
 [MIT](LICENSE) — Copyright (c) 2026 **Pondsi**
