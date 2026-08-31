@@ -1,3 +1,10 @@
 # These are supported funding model platforms
 
-paypal: pondsi
+github: Pondsi
+patreon:
+open_collective:
+ko_fi:
+tidelify:
+custom:
+  - https://github.com/Pondsi/P-Todo/blob/main/sponsors/wechat-pay.jpg
+  - https://github.com/Pondsi/P-Todo/blob/main/sponsors/alipay.jpg
