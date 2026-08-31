@@ -14,11 +14,11 @@ Your support helps maintain and improve this project. Thank you! 🙏
 
 ## 微信支付 / WeChat Pay
 
-<img src="sponsors/wechat-pay.jpg" width="300" alt="WeChat Pay QR Code">
+<img src="https://github.com/Pondsi/P-Todo/blob/main/sponsors/wechat-pay.jpg?raw=true" width="300" alt="WeChat Pay QR Code">
 
 ## 支付宝 / Alipay
 
-<img src="sponsors/alipay.jpg" width="300" alt="Alipay QR Code">
+<img src="https://github.com/Pondsi/P-Todo/blob/main/sponsors/alipay.jpg?raw=true" width="300" alt="Alipay QR Code">
 
 ---
 
