@@ -93,9 +93,9 @@
                         <arg>--add-exports</arg>
                         <arg>javafx.graphics/com.sun.glass.ui=com.teamtodo</arg>
                         <arg>--add-reads</arg>
-                        <arg>com.teamtodo=java.httpserver</arg>
+                        <arg>com.teamtodo=jdk.httpserver</arg>
                         <arg>--add-exports</arg>
-                        <arg>java.httpserver/com.sun.net.httpserver=com.teamtodo</arg>
+                        <arg>jdk.httpserver/com.sun.net.httpserver=com.teamtodo</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>

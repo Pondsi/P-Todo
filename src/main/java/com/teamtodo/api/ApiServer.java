@@ -3,7 +3,6 @@ package com.teamtodo.api;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 import com.teamtodo.App;
-import com.teamtodo.App;
 import com.teamtodo.dao.CommentDao;
 import com.teamtodo.model.Comment;
 import com.teamtodo.model.Todo;
@@ -72,10 +71,11 @@ public class ApiServer {
     private final UserService userService = new UserService();
     private final CommentDao commentDao = new CommentDao();
     private HttpServer server;
+    private java.util.concurrent.ExecutorService apiExecutor;
 
     public void start() {
         try {
-            server = HttpServer.create(new InetSocketAddress(duankou3), 0);
+            server = HttpServer.create(new InetSocketAddress(java.net.InetAddress.getLoopbackAddress(), duankou3), 0);
             server.createContext("/api/health", this::handleHealth);
             server.createContext("/api/todos", this::handleTodos);
             server.createContext("/api/users", this::handleUsers);
@@ -85,7 +85,8 @@ public class ApiServer {
             server.createContext("/api/settings/sound", this::handleSoundSettings);
             server.createContext("/api/settings/language", this::handleLanguageSettings);
             server.createContext("/api/export", this::handleExport);
-            server.setExecutor(null);
+            apiExecutor = java.util.concurrent.Executors.newFixedThreadPool(4);
+            server.setExecutor(apiExecutor);
             server.start();
             log.info("REST API 服务器已启动: http://localhost:{}", duankou3);
         } catch (IOException e) {
@@ -97,6 +98,10 @@ public class ApiServer {
         if (server != null) {
             server.stop(0);
             log.info("REST API 服务器已停止");
+        }
+        if (apiExecutor != null) {
+            apiExecutor.shutdownNow();
+            apiExecutor = null;
         }
     }
 
@@ -132,7 +137,8 @@ public class ApiServer {
                 sendJson(exchange, 405, Map.of("error", I18n.t("api.err.methodNotAllowed")));
             }
         } catch (Exception e) {
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("音效设置请求处理失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -157,7 +163,8 @@ public class ApiServer {
                 sendJson(exchange, 405, Map.of("error", I18n.t("api.err.methodNotAllowed")));
             }
         } catch (Exception e) {
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("语言设置请求处理失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -176,17 +183,32 @@ public class ApiServer {
                 return;
             }
             String path = (String) body.get("path");
+            File baseDir = new File(System.getProperty("user.home") + File.separator + "P-Todo" + File.separator + "export");
+            baseDir.mkdirs();
+            File file;
             if (path == null || path.isBlank()) {
-                String dir = System.getProperty("user.home") + File.separator + "P-Todo" + File.separator + "export";
-                new File(dir).mkdirs();
-                path = dir + File.separator + "P-Todo-export." + format.toLowerCase();
+                file = new File(baseDir, "P-Todo-export." + format.toLowerCase());
+            } else if (new File(path).isAbsolute() || path.contains("..") || path.contains(":")
+                    || path.startsWith("/") || path.startsWith("\\")) {
+                // 拒绝绝对路径与 .. 逃逸，仅允许导出目录内的相对文件名
+                sendJson(exchange, 400, Map.of("error", "Invalid path: use a plain file name inside the export directory"));
+                return;
+            } else {
+                File base = baseDir.getCanonicalFile();
+                file = new File(base, path).getCanonicalFile();
+                // resolve 后校验前缀，防止逃逸出导出目录
+                if (!file.getPath().startsWith(base.getPath() + File.separator)) {
+                    sendJson(exchange, 400, Map.of("error", "Invalid path: outside the export directory"));
+                    return;
+                }
             }
-            File file = format.equalsIgnoreCase("json")
-                    ? com.teamtodo.util.DataExporter.exportJson(new File(path))
-                    : com.teamtodo.util.DataExporter.exportCsv(new File(path));
-            sendJson(exchange, 200, Map.of("file", file.getAbsolutePath(), "format", format.toLowerCase()));
+            File result = format.equalsIgnoreCase("json")
+                    ? com.teamtodo.util.DataExporter.exportJson(file)
+                    : com.teamtodo.util.DataExporter.exportCsv(file);
+            sendJson(exchange, 200, Map.of("file", result.getAbsolutePath(), "format", format.toLowerCase()));
         } catch (Exception e) {
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("导出请求处理失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -353,8 +375,8 @@ public class ApiServer {
                 default -> sendJson(exchange, 405, Map.of("error", I18n.t("api.err.methodNotAllowed")));
             }
         } catch (Exception e) {
-            log.error("处理待办请求失败: {}", e.getMessage());
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("处理待办请求失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -377,7 +399,8 @@ public class ApiServer {
                 sendJson(exchange, 400, Map.of("error", I18n.t("api.err.commentIdMissing")));
             }
         } catch (Exception e) {
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("评论请求处理失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -432,8 +455,8 @@ public class ApiServer {
                 default -> sendJson(exchange, 405, Map.of("error", I18n.t("api.err.methodNotAllowed")));
             }
         } catch (Exception e) {
-            log.error("处理用户请求失败: {}", e.getMessage());
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("处理用户请求失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -446,7 +469,8 @@ public class ApiServer {
             stats.put("total", todoService.listAll().size());
             sendJson(exchange, 200, stats);
         } catch (Exception e) {
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("统计请求处理失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 
@@ -467,7 +491,8 @@ public class ApiServer {
                     .collect(Collectors.toList());
             sendJson(exchange, 200, results);
         } catch (Exception e) {
-            sendJson(exchange, 500, Map.of("error", e.getMessage()));
+            log.error("搜索请求处理失败", e);
+            sendJson(exchange, 500, Map.of("error", I18n.t("api.err.internal")));
         }
     }
 

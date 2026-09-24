@@ -16,10 +16,10 @@ public class NotificationService {
     private String customSoundPath;
 
     public enum SoundType {
-        COMPLETE(I18n.t("status.done")), WARNING(I18n.t("common.warning")), ERROR(I18n.t("common.error")), INFO(I18n.t("common.info")), REMINDER(I18n.t("reminder.title"));
-        private final String label;
-        SoundType(String label) { this.label = label; }
-        public String getLabel() { return label; }
+        COMPLETE("status.done"), WARNING("common.warning"), ERROR("common.error"), INFO("common.info"), REMINDER("reminder.title");
+        private final String labelKey;
+        SoundType(String labelKey) { this.labelKey = labelKey; }
+        public String getLabel() { return I18n.t(labelKey); }
     }
 
     private NotificationService() {}

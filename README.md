@@ -24,7 +24,7 @@ P-Todo provides a complete **REST API** (18 endpoints on port 9527) that allows 
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Review PR #42","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Review PR #42","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 For complete API documentation, see **[SKILL.md](SKILL.md)** — a ready-to-use skill file designed for AI agents (OpenClaw, Claude, GPT, etc.).
@@ -162,7 +162,7 @@ P-Todo 提供完整的 **REST API**（連接埠 9527，18 個端點），讓 AI 
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"審查 PR #42","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"審查 PR #42","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 完整 API 文件請參閱 **[SKILL.md](SKILL.md)**——專為 AI 智能體（OpenClaw、Claude、GPT 等）設計的技能文件。
@@ -289,7 +289,7 @@ P-Todoは、AIエージェントがアプリケーションを完全に制御で
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"PR #42をレビュー","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"PR #42をレビュー","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 完全なAPIドキュメントは **[SKILL.md](SKILL.md)** を参照——AIエージェント（OpenClaw、Claude、GPT等）向けに設計されたスキルファイルです。
@@ -408,7 +408,7 @@ P-Todo는 AI 에이전트가 애플리케이션을 완전히 제어할 수 있�
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"PR #42 검토","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"PR #42 검토","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 완전한 API 문서는 **[SKILL.md](SKILL.md)**를 참조하세요 — AI 에이전트(OpenClaw, Claude, GPT 등)를 위해 설계된 스킬 파일입니다.
@@ -527,7 +527,7 @@ P-Todo fournit une **REST API** complète (port 9527, 18 points de terminaison) 
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Revoir la PR #42","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Revoir la PR #42","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 Pour la documentation complète de l'API, consultez **[SKILL.md](SKILL.md)** — un fichier de compétence conçu pour les agents IA (OpenClaw, Claude, GPT, etc.).
@@ -611,7 +611,7 @@ P-Todo bietet eine vollständige **REST API** (Port 9527, 18 Endpunkte), mit der
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"PR #42 überprüfen","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"PR #42 überprüfen","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 Vollständige API-Dokumentation siehe **[SKILL.md](SKILL.md)** — eine einsatzbereite Skill-Datei für KI-Agenten (OpenClaw, Claude, GPT etc.).
@@ -695,7 +695,7 @@ P-Todo proporciona una **REST API** completa (puerto 9527, 18 endpoints) que per
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Revisar PR #42","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Revisar PR #42","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 Para la documentación completa de la API, consulte **[SKILL.md](SKILL.md)** — un archivo de habilidad diseñado para agentes de IA (OpenClaw, Claude, GPT, etc.).
@@ -779,7 +779,7 @@ O P-Todo fornece uma **REST API** completa (porta 9527, 18 endpoints) que permit
 ```bash
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Revisar PR #42","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Revisar PR #42","priority":"HIGH","assigneeId":"user-001"}'
 ```
 
 Para documentação completa da API, consulte **[SKILL.md](SKILL.md)** — um arquivo de habilidade projetado para agentes de IA (OpenClaw, Claude, GPT, etc.).

@@ -121,7 +121,7 @@ public class App extends Application {
 
     /** 加载应用图标：优先外部文件，回退内置 */
     public static Image loadIcon() {
-        // 优先级：项目目录图标 > F:\XXZ\日程.png
+        // 优先级：项目目录图标 > 内置图标
         String[] candidates = {
                 "icon.png",
                 "icon.png"

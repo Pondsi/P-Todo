@@ -23,16 +23,17 @@ GET /api/health
 ```
 GET    /api/todos              获取所有待办
 GET    /api/todos/{id}         获取单个待办
-POST   /api/todos              创建待办（body: {title, description, priority, assignee_id, due_date, tags}）
+POST   /api/todos              创建待办（body: {title, description, priority, assigneeId, dueDate, tags}）
 PUT    /api/todos/{id}         更新待办
 DELETE /api/todos/{id}         删除待办
 POST   /api/todos/{id}/complete 切换完成状态
+POST   /api/todos/{id}/claim   认领待办（body: {userId}，指派并置为进行中）
 ```
 
 ### 评论
 ```
 GET    /api/todos/{id}/comments  获取待办评论
-POST   /api/todos/{id}/comments  添加评论（body: {user_id, content}）
+POST   /api/todos/{id}/comments  添加评论（body: {userId, content}）
 DELETE /api/comments/{id}        删除评论
 ```
 
@@ -53,10 +54,10 @@ GET    /api/search?q=keyword   搜索待办
 ### 设置
 ```
 GET    /api/settings/sound     获取音效路径
-POST   /api/settings/sound     设置音效路径（body: {soundPath}）
+POST   /api/settings/sound     设置音效路径（body: {path}）
 GET    /api/settings/language  获取当前语言
-POST   /api/settings/language  切换语言（body: {language}，如 "zh"/"en"/"ja"）
-POST   /api/export             导出数据（body: {format: "json"|"csv", path: "可选"}）
+POST   /api/settings/language  切换语言（body: {lang}，如 "zh"/"en"/"ja"）
+POST   /api/export             导出数据（body: {format: "json"|"csv", path: "可选，仅限导出目录 ~/P-Todo/export 内的文件名"}）
 ```
 
 ### 优先级
@@ -67,7 +68,7 @@ POST   /api/export             导出数据（body: {format: "json"|"csv", path:
 # 创建待办
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"买菜","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"买菜","priority":"HIGH","assigneeId":"user-001"}'
 
 # 获取所有待办
 curl http://localhost:9527/api/todos
@@ -99,16 +100,17 @@ GET /api/health
 ```
 GET    /api/todos              取得所有待辦
 GET    /api/todos/{id}         取得單個待辦
-POST   /api/todos              建立待辦（body: {title, description, priority, assignee_id, due_date, tags}）
+POST   /api/todos              建立待辦（body: {title, description, priority, assigneeId, dueDate, tags}）
 PUT    /api/todos/{id}         更新待辦
 DELETE /api/todos/{id}         刪除待辦
 POST   /api/todos/{id}/complete 切換完成狀態
+POST   /api/todos/{id}/claim   認領待辦（body: {userId}，指派並設為進行中）
 ```
 
 ### 評論
 ```
 GET    /api/todos/{id}/comments  取得待辦評論
-POST   /api/todos/{id}/comments  新增評論（body: {user_id, content}）
+POST   /api/todos/{id}/comments  新增評論（body: {userId, content}）
 DELETE /api/comments/{id}        刪除評論
 ```
 
@@ -129,10 +131,10 @@ GET    /api/search?q=keyword   搜尋待辦
 ### 設定
 ```
 GET    /api/settings/sound     取得音效路徑
-POST   /api/settings/sound     設定音效路徑（body: {soundPath}）
+POST   /api/settings/sound     設定音效路徑（body: {path}）
 GET    /api/settings/language  取得目前語言
-POST   /api/settings/language  切換語言（body: {language}，如 "zh"/"en"/"ja"）
-POST   /api/export             匯出資料（body: {format: "json"|"csv", path: "可選"}）
+POST   /api/settings/language  切換語言（body: {lang}，如 "zh"/"en"/"ja"）
+POST   /api/export             匯出資料（body: {format: "json"|"csv", path: "可選，僅限匯出目錄 ~/P-Todo/export 內的檔案名"}）
 ```
 
 ### 優先順序
@@ -143,7 +145,7 @@ POST   /api/export             匯出資料（body: {format: "json"|"csv", path:
 # 建立待辦
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"買菜","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"買菜","priority":"HIGH","assigneeId":"user-001"}'
 
 # 取得所有待辦
 curl http://localhost:9527/api/todos
@@ -175,16 +177,17 @@ GET /api/health
 ```
 GET    /api/todos              List all todos
 GET    /api/todos/{id}         Get single todo
-POST   /api/todos              Create todo (body: {title, description, priority, assignee_id, due_date, tags})
+POST   /api/todos              Create todo (body: {title, description, priority, assigneeId, dueDate, tags})
 PUT    /api/todos/{id}         Update todo
 DELETE /api/todos/{id}         Delete todo
 POST   /api/todos/{id}/complete Toggle completion
+POST   /api/todos/{id}/claim   Claim todo (body: {userId}, assigns and sets in progress)
 ```
 
 ### Comments
 ```
 GET    /api/todos/{id}/comments  Get comments
-POST   /api/todos/{id}/comments  Add comment (body: {user_id, content})
+POST   /api/todos/{id}/comments  Add comment (body: {userId, content})
 DELETE /api/comments/{id}        Delete comment
 ```
 
@@ -205,10 +208,10 @@ GET    /api/search?q=keyword   Search todos
 ### Settings
 ```
 GET    /api/settings/sound     Get sound path
-POST   /api/settings/sound     Set sound path (body: {soundPath})
+POST   /api/settings/sound     Set sound path (body: {path})
 GET    /api/settings/language  Get current language
-POST   /api/settings/language  Set language (body: {language}, e.g. "zh"/"en"/"ja")
-POST   /api/export             Export data (body: {format: "json"|"csv", path: "optional"})
+POST   /api/settings/language  Set language (body: {lang}, e.g. "zh"/"en"/"ja")
+POST   /api/export             Export data (body: {format: "json"|"csv", path: "optional, plain file name inside ~/P-Todo/export only"})
 ```
 
 ### Priority Values
@@ -219,7 +222,7 @@ POST   /api/export             Export data (body: {format: "json"|"csv", path: "
 # Create todo
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Buy groceries","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Buy groceries","priority":"HIGH","assigneeId":"user-001"}'
 
 # List all todos
 curl http://localhost:9527/api/todos
@@ -251,16 +254,17 @@ GET /api/health
 ```
 GET    /api/todos              全タスク取得
 GET    /api/todos/{id}         単一タスク取得
-POST   /api/todos              タスク作成（body: {title, description, priority, assignee_id, due_date, tags}）
+POST   /api/todos              タスク作成（body: {title, description, priority, assigneeId, dueDate, tags}）
 PUT    /api/todos/{id}         タスク更新
 DELETE /api/todos/{id}         タスク削除
 POST   /api/todos/{id}/complete 完了状態切替
+POST   /api/todos/{id}/claim   タスクを担当（body: {userId}、担当者に設定し進行中にする）
 ```
 
 ### コメント
 ```
 GET    /api/todos/{id}/comments  コメント取得
-POST   /api/todos/{id}/comments  コメント追加（body: {user_id, content}）
+POST   /api/todos/{id}/comments  コメント追加（body: {userId, content}）
 DELETE /api/comments/{id}        コメント削除
 ```
 
@@ -281,10 +285,10 @@ GET    /api/search?q=keyword   タスク検索
 ### 設定
 ```
 GET    /api/settings/sound     音声パス取得
-POST   /api/settings/sound     音声パス設定（body: {soundPath}）
+POST   /api/settings/sound     音声パス設定（body: {path}）
 GET    /api/settings/language  現在の言語取得
-POST   /api/settings/language  言語切替（body: {language}、例："zh"/"en"/"ja"）
-POST   /api/export             データエクスポート（body: {format: "json"|"csv", path: "省略可"}）
+POST   /api/settings/language  言語切替（body: {lang}、例："zh"/"en"/"ja"）
+POST   /api/export             データエクスポート（body: {format: "json"|"csv", path: "省略可、エクスポート先 ~/P-Todo/export 内のファイル名のみ"}）
 ```
 
 ### 優先度
@@ -295,7 +299,7 @@ POST   /api/export             データエクスポート（body: {format: "jso
 # タスク作成
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"食材を買う","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"食材を買う","priority":"HIGH","assigneeId":"user-001"}'
 
 # 全タスク取得
 curl http://localhost:9527/api/todos
@@ -327,16 +331,17 @@ GET /api/health
 ```
 GET    /api/todos              모든 할일 목록
 GET    /api/todos/{id}         단일 할일 조회
-POST   /api/todos              할일 생성 (body: {title, description, priority, assignee_id, due_date, tags})
+POST   /api/todos              할일 생성 (body: {title, description, priority, assigneeId, dueDate, tags})
 PUT    /api/todos/{id}         할일 수정
 DELETE /api/todos/{id}         할일 삭제
 POST   /api/todos/{id}/complete 완료 상태 전환
+POST   /api/todos/{id}/claim   할 일 담당 (body: {userId}, 담당 지정 후 진행 중으로 설정)
 ```
 
 ### 댓글
 ```
 GET    /api/todos/{id}/comments  댓글 조회
-POST   /api/todos/{id}/comments  댓글 추가 (body: {user_id, content})
+POST   /api/todos/{id}/comments  댓글 추가 (body: {userId, content})
 DELETE /api/comments/{id}        댓글 삭제
 ```
 
@@ -357,10 +362,10 @@ GET    /api/search?q=keyword   할일 검색
 ### 설정
 ```
 GET    /api/settings/sound     사운드 경로 조회
-POST   /api/settings/sound     사운드 경로 설정 (body: {soundPath})
+POST   /api/settings/sound     사운드 경로 설정 (body: {path})
 GET    /api/settings/language  현재 언어 조회
-POST   /api/settings/language  언어 설정 (body: {language}, 예: "zh"/"en"/"ja")
-POST   /api/export             데이터 내보내기 (body: {format: "json"|"csv", path: "선택사항"})
+POST   /api/settings/language  언어 설정 (body: {lang}, 예: "zh"/"en"/"ja")
+POST   /api/export             데이터 내보내기 (body: {format: "json"|"csv", path: "선택사항, 내보내기 폴더 ~/P-Todo/export 안의 파일 이름만 허용"})
 ```
 
 ### 우선순위 값
@@ -371,7 +376,7 @@ POST   /api/export             데이터 내보내기 (body: {format: "json"|"cs
 # 할일 생성
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"장보기","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"장보기","priority":"HIGH","assigneeId":"user-001"}'
 
 # 모든 할일 목록
 curl http://localhost:9527/api/todos
@@ -403,16 +408,17 @@ GET /api/health
 ```
 GET    /api/todos              Lister toutes les tâches
 GET    /api/todos/{id}         Obtenir une tâche
-POST   /api/todos              Créer une tâche (body: {title, description, priority, assignee_id, due_date, tags})
+POST   /api/todos              Créer une tâche (body: {title, description, priority, assigneeId, dueDate, tags})
 PUT    /api/todos/{id}         Modifier une tâche
 DELETE /api/todos/{id}         Supprimer une tâche
 POST   /api/todos/{id}/complete Basculer l'achèvement
+POST   /api/todos/{id}/claim   Réserver la tâche (body: {userId}, assigne et met en cours)
 ```
 
 ### Commentaires
 ```
 GET    /api/todos/{id}/comments  Obtenir les commentaires
-POST   /api/todos/{id}/comments  Ajouter un commentaire (body: {user_id, content})
+POST   /api/todos/{id}/comments  Ajouter un commentaire (body: {userId, content})
 DELETE /api/comments/{id}        Supprimer un commentaire
 ```
 
@@ -433,10 +439,10 @@ GET    /api/search?q=keyword   Rechercher des tâches
 ### Paramètres
 ```
 GET    /api/settings/sound     Obtenir le chemin du son
-POST   /api/settings/sound     Définir le chemin du son (body: {soundPath})
+POST   /api/settings/sound     Définir le chemin du son (body: {path})
 GET    /api/settings/language  Obtenir la langue actuelle
-POST   /api/settings/language  Définir la langue (body: {language}, ex: "zh"/"en"/"ja")
-POST   /api/export             Exporter les données (body: {format: "json"|"csv", path: "optionnel"})
+POST   /api/settings/language  Définir la langue (body: {lang}, ex: "zh"/"en"/"ja")
+POST   /api/export             Exporter les données (body: {format: "json"|"csv", path: "optionnel, simple nom de fichier dans ~/P-Todo/export uniquement"})
 ```
 
 ### Valeurs de priorité
@@ -447,7 +453,7 @@ POST   /api/export             Exporter les données (body: {format: "json"|"csv
 # Créer une tâche
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Acheter des courses","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Acheter des courses","priority":"HIGH","assigneeId":"user-001"}'
 
 # Lister toutes les tâches
 curl http://localhost:9527/api/todos
@@ -479,16 +485,17 @@ GET /api/health
 ```
 GET    /api/todos              Alle Auflagen auflisten
 GET    /api/todos/{id}         Einzelne Aufgabe abrufen
-POST   /api/todos              Aufgabe erstellen (body: {title, description, priority, assignee_id, due_date, tags})
+POST   /api/todos              Aufgabe erstellen (body: {title, description, priority, assigneeId, dueDate, tags})
 PUT    /api/todos/{id}         Aufgabe bearbeiten
 DELETE /api/todos/{id}         Aufgabe löschen
 POST   /api/todos/{id}/complete Abschluss umschalten
+POST   /api/todos/{id}/claim   Aufgabe übernehmen (body: {userId}, zuweisen und in Bearbeitung setzen)
 ```
 
 ### Kommentare
 ```
 GET    /api/todos/{id}/comments  Kommentare abrufen
-POST   /api/todos/{id}/comments  Kommentar hinzufügen (body: {user_id, content})
+POST   /api/todos/{id}/comments  Kommentar hinzufügen (body: {userId, content})
 DELETE /api/comments/{id}        Kommentar löschen
 ```
 
@@ -509,10 +516,10 @@ GET    /api/search?q=keyword   Aufgaben suchen
 ### Einstellungen
 ```
 GET    /api/settings/sound     Soundpfad abrufen
-POST   /api/settings/sound     Soundpfad festlegen (body: {soundPath})
+POST   /api/settings/sound     Soundpfad festlegen (body: {path})
 GET    /api/settings/language  Aktuelle Sprache abrufen
-POST   /api/settings/language  Sprache festlegen (body: {language}, z.B. "zh"/"en"/"ja")
-POST   /api/export             Daten exportieren (body: {format: "json"|"csv", path: "optional"})
+POST   /api/settings/language  Sprache festlegen (body: {lang}, z.B. "zh"/"en"/"ja")
+POST   /api/export             Daten exportieren (body: {format: "json"|"csv", path: "optional, nur einfacher Dateiname im Exportordner ~/P-Todo/export"})
 ```
 
 ### Prioritätswerte
@@ -523,7 +530,7 @@ POST   /api/export             Daten exportieren (body: {format: "json"|"csv", p
 # Aufgabe erstellen
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Einkaufen","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Einkaufen","priority":"HIGH","assigneeId":"user-001"}'
 
 # Alle Aufgaben auflisten
 curl http://localhost:9527/api/todos
@@ -555,16 +562,17 @@ GET /api/health
 ```
 GET    /api/todos              Listar todas las tareas
 GET    /api/todos/{id}         Obtener una tarea
-POST   /api/todos              Crear tarea (body: {title, description, priority, assignee_id, due_date, tags})
+POST   /api/todos              Crear tarea (body: {title, description, priority, assigneeId, dueDate, tags})
 PUT    /api/todos/{id}         Actualizar tarea
 DELETE /api/todos/{id}         Eliminar tarea
 POST   /api/todos/{id}/complete Alternar finalización
+POST   /api/todos/{id}/claim   Reclamar tarea (body: {userId}, asigna y pone en progreso)
 ```
 
 ### Comentarios
 ```
 GET    /api/todos/{id}/comments  Obtener comentarios
-POST   /api/todos/{id}/comments  Añadir comentario (body: {user_id, content})
+POST   /api/todos/{id}/comments  Añadir comentario (body: {userId, content})
 DELETE /api/comments/{id}        Eliminar comentario
 ```
 
@@ -585,10 +593,10 @@ GET    /api/search?q=keyword   Buscar tareas
 ### Configuración
 ```
 GET    /api/settings/sound     Obtener ruta de sonido
-POST   /api/settings/sound     Establecer ruta de sonido (body: {soundPath})
+POST   /api/settings/sound     Establecer ruta de sonido (body: {path})
 GET    /api/settings/language  Obtener idioma actual
-POST   /api/settings/language  Establecer idioma (body: {language}, ej: "zh"/"en"/"ja")
-POST   /api/export             Exportar datos (body: {format: "json"|"csv", path: "opcional"})
+POST   /api/settings/language  Establecer idioma (body: {lang}, ej: "zh"/"en"/"ja")
+POST   /api/export             Exportar datos (body: {format: "json"|"csv", path: "opcional, solo nombre de archivo dentro de ~/P-Todo/export"})
 ```
 
 ### Valores de prioridad
@@ -599,7 +607,7 @@ POST   /api/export             Exportar datos (body: {format: "json"|"csv", path
 # Crear tarea
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Comprar víveres","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Comprar víveres","priority":"HIGH","assigneeId":"user-001"}'
 
 # Listar todas las tareas
 curl http://localhost:9527/api/todos
@@ -631,16 +639,17 @@ GET /api/health
 ```
 GET    /api/todos              Listar todas as tarefas
 GET    /api/todos/{id}         Obter uma tarefa
-POST   /api/todos              Criar tarefa (body: {title, description, priority, assignee_id, due_date, tags})
+POST   /api/todos              Criar tarefa (body: {title, description, priority, assigneeId, dueDate, tags})
 PUT    /api/todos/{id}         Atualizar tarefa
 DELETE /api/todos/{id}         Excluir tarefa
 POST   /api/todos/{id}/complete Alternar conclusão
+POST   /api/todos/{id}/claim   Assumir tarefa (body: {userId}, atribui e define em progresso)
 ```
 
 ### Comentários
 ```
 GET    /api/todos/{id}/comments  Obter comentários
-POST   /api/todos/{id}/comments  Adicionar comentário (body: {user_id, content})
+POST   /api/todos/{id}/comments  Adicionar comentário (body: {userId, content})
 DELETE /api/comments/{id}        Excluir comentário
 ```
 
@@ -661,10 +670,10 @@ GET    /api/search?q=keyword   Pesquisar tarefas
 ### Configurações
 ```
 GET    /api/settings/sound     Obter caminho do som
-POST   /api/settings/sound     Definir caminho do som (body: {soundPath})
+POST   /api/settings/sound     Definir caminho do som (body: {path})
 GET    /api/settings/language  Obter idioma atual
-POST   /api/settings/language  Definir idioma (body: {language}, ex: "zh"/"en"/"ja")
-POST   /api/export             Exportar dados (body: {format: "json"|"csv", path: "opcional"})
+POST   /api/settings/language  Definir idioma (body: {lang}, ex: "zh"/"en"/"ja")
+POST   /api/export             Exportar dados (body: {format: "json"|"csv", path: "opcional, apenas nome de arquivo dentro de ~/P-Todo/export"})
 ```
 
 ### Valores de prioridade
@@ -675,7 +684,7 @@ POST   /api/export             Exportar dados (body: {format: "json"|"csv", path
 # Criar tarefa
 curl -X POST http://localhost:9527/api/todos \
   -H "Content-Type: application/json" \
-  -d '{"title":"Comprar mantimentos","priority":"HIGH","assignee_id":"user-001"}'
+  -d '{"title":"Comprar mantimentos","priority":"HIGH","assigneeId":"user-001"}'
 
 # Listar todas as tarefas
 curl http://localhost:9527/api/todos

@@ -108,7 +108,6 @@ public class SettingsController {
 
     @FXML private void onLangChanged() {
         String selected = langCombo.getValue();
-        System.out.println("[DEBUG] onLangChanged: selected=" + selected);
         if (selected != null) {
             com.teamtodo.util.I18n.setLang(selected);
             langHint.setText(com.teamtodo.util.I18n.t("settings.languageHint"));
