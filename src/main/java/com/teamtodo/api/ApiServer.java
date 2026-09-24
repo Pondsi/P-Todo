@@ -76,15 +76,32 @@ public class ApiServer {
     public void start() {
         try {
             server = HttpServer.create(new InetSocketAddress(java.net.InetAddress.getLoopbackAddress(), duankou3), 0);
-            server.createContext("/api/health", this::handleHealth);
-            server.createContext("/api/todos", this::handleTodos);
-            server.createContext("/api/users", this::handleUsers);
-            server.createContext("/api/stats", this::handleStats);
-            server.createContext("/api/search", this::handleSearch);
-            server.createContext("/api/comments", this::handleComments);
-            server.createContext("/api/settings/sound", this::handleSoundSettings);
-            server.createContext("/api/settings/language", this::handleLanguageSettings);
-            server.createContext("/api/export", this::handleExport);
+            // 创建路由并添加 Host 头校验（防 DNS rebinding 攻击）
+            var _ctxs = new com.sun.net.httpserver.HttpContext[]{
+                server.createContext("/api/health", this::handleHealth),
+                server.createContext("/api/todos", this::handleTodos),
+                server.createContext("/api/users", this::handleUsers),
+                server.createContext("/api/stats", this::handleStats),
+                server.createContext("/api/search", this::handleSearch),
+                server.createContext("/api/comments", this::handleComments),
+                server.createContext("/api/settings/sound", this::handleSoundSettings),
+                server.createContext("/api/settings/language", this::handleLanguageSettings),
+                server.createContext("/api/export", this::handleExport),
+            };
+            var _hostFilter = new com.sun.net.httpserver.Filter() {
+                @Override public void doFilter(HttpExchange ex, Chain ch) throws IOException {
+                    String host = ex.getRequestHeaders().getFirst("Host");
+                    if (host != null && !host.isEmpty()) {
+                        String h = host.contains(":") ? host.substring(0, host.lastIndexOf(':')) : host;
+                        if (h.equals("localhost") || h.equals("127.0.0.1") || h.equals("[::1]")) {
+                            ch.doFilter(ex); return;
+                        }
+                    }
+                    sendJson(ex, 403, Map.of("error", "Forbidden: localhost only"));
+                }
+                @Override public String description() { return "DNS rebinding protection"; }
+            };
+            for (var _c : _ctxs) _c.getFilters().add(_hostFilter);
             apiExecutor = java.util.concurrent.Executors.newFixedThreadPool(4);
             server.setExecutor(apiExecutor);
             server.start();
